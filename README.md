@@ -1,35 +1,16 @@
-Recipe:
+# Getting started
+
+Checkout a CMSSW version and get the monoZ_Analysis code
 ```bash
 cmsrel CMSSW_8_0_26_patch1
 cd CMSSW_8_0_26_patch1/src
 cmsenv
 git cms-init
-
-# If you don't plan to submit nTuples from this work area, feel free to skip to `mkdir Analysis`
-
-# MET filters & uncertainties
-git cms-merge-topic -u cms-met:METRecipe_8020
-
-# Summer16 Cut-based EG ID
-git cms-merge-topic -u Sam-Harper:HEEPV70VID_8010_ReducedCheckout
-git cms-merge-topic -u ikrav:egm_id_80X_v3
-git cms-merge-topic -u ikrav:egm_id_80X_v3_photons
-
-# EGM smearer
-git cms-merge-topic -u gfasanel:Moriond17_23Jan
-pushd EgammaAnalysis/ElectronTools/data
-git clone git@github.com:gfasanel/ScalesSmearings.git
-popd
-
-# The smearer git history makes some insanity, refresh everything
-rm .git/info/sparse-checkout
-git cms-sparse-checkout $CMSSW_VERSION HEAD
-git read-tree -mu HEAD
-
-mkdir Analysis && cd Analysis
-# Or, kerberos via
-# git clone https://:@gitlab.cern.ch:8443/ncsmith/monoZ.git
-git clone ssh://git@gitlab.cern.ch:7999/ncsmith/monoZ.git
+git clone git@github.com:NEUAnalyses/monoZ_Analysis.git
+source monoZ_Analysis/setup.sh
+```
+You will still need to compile 
+```bash 
 cd $CMSSW_BASE/src
 scram b -j 12
 ```
