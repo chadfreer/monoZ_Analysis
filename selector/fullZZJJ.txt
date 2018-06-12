@@ -1,0 +1,2 @@
+root://eoscms.cern.ch//eos/cms/store/user/cfreer/monoZ_Nov2017/ZZJJ_ZZTo2L2Nu_EWK_13TeV-madgraph-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v2/171124_224936/0000/output_1.root
+root://eoscms.cern.ch//eos/cms/store/user/cfreer/monoZ_Nov2017/ZZJJ_ZZTo2L2Nu_EWK_13TeV-madgraph-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v2/171124_224936/0000/output_2.root

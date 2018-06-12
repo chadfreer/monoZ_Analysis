@@ -1,0 +1,10 @@
+<use name="root"/>
+<use name="rootphysics"/>
+<!-- TTreeReader stuff is in rootgraphics -->
+<use name="rootgraphics"/>
+
+<use name="CondFormats/BTauObjects"/>
+<use name="CondTools/BTau"/>
+<export>
+  <lib name="1"/>
+</export>

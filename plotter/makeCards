@@ -1,0 +1,338 @@
+#!/usr/bin/env python
+import argparse
+import plotting
+import ROOT
+import os
+ROOT.gROOT.SetBatch(True)
+ROOT.PyConfig.IgnoreCommandLineOptions = True
+
+
+def checkShape(shapeHist, name):
+    negativeBins = False
+    zeroBins = False
+    for iBin in range(shapeHist.GetNbinsX()):
+        b = shapeHist.GetBinContent(iBin + 1)
+        if b < 0.:
+            negativeBins = True
+            shapeHist.SetBinContent(iBin + 1, 0.)
+            shapeHist.SetBinError(iBin + 1, -b)
+        elif b == 0.:
+            zeroBins = True
+    if negativeBins:
+        # TODO: print if -vv or something
+        print "Info: Negative bin content removed in shape histogram %s" % (name, )
+    if zeroBins:
+        # print "Info: Zero bin content found in shape histogram %s" % shapeHist.GetName()
+        pass
+    if shapeHist.Integral() == 0.:
+        print "Warning: Integral zero in shape histogram %s" % (name, )
+    if shapeHist.GetBinContent(0) != 0.:
+        print "Info: zeroing underflow bin in shape histogram %s" % (name, )
+        shapeHist.SetBinContent(0, 0.)
+    if shapeHist.GetBinContent(shapeHist.GetNbinsX()+1) != 0.:
+        print "Info: zeroing overflow bin in shape histogram %s" % (name, )
+        shapeHist.SetBinContent(shapeHist.GetNbinsX()+1, 0.)
+
+
+# Purpose: keep track of RooWorkspace and datacards together
+class Workspace:
+    def __init__(self, fileName):
+        self._wfile = ROOT.TFile(fileName, "recreate")
+        self.w = ROOT.RooWorkspace("workspace", "Workspace")
+        ROOT.RooMsgService.instance().setGlobalKillBelow(ROOT.RooFit.WARNING)
+        self.cards = {}
+        self.nSignals = 0
+
+    def addChannel(self, channel):
+        self.cards[channel] = {
+            "shapes": [],
+            "observation": [],
+            "rates": [],  # To be a tuple (process name, rate), signals first!
+            "nuisances": {},  # To be a dict "nuisance name": {"process name": scale, ...}
+            "extras": set(),
+        }
+
+    def write(self):
+        self._wfile.cd()
+        self.w.Write()
+        self._wfile.Close()
+        for channel, card in self.cards.iteritems():
+            with open("card_%s.dat" % channel, "w") as fout:
+                # Headers
+                fout.write("# Card for channel %s\n" % channel)
+                fout.write("imax 1 # process in this card\n")
+                fout.write("jmax %d # process in this card - 1\n" % (len(card["rates"])-1, ))
+                fout.write("kmax %d # nuisances in this card\n" % len(card["nuisances"]))
+                fout.write("-"*30 + "\n")
+                for line in card["shapes"]:
+                    fout.write(line+"\n")
+                fout.write("-"*30 + "\n")
+                for line in card["observation"]:
+                    fout.write(line+"\n")
+                fout.write("-"*30 + "\n")
+                binLine = "{0:<40}".format("bin")
+                procLine = "{0:<40}".format("process")
+                indexLine = "{0:<40}".format("process")
+                rateLine = "{0:<40}".format("rate")
+                for i, tup in enumerate(card["rates"]):
+                    binLine += "{0:>15}".format(channel)
+                    procLine += "{0:>15}".format(tup[0])
+                    indexLine += "{0:>15}".format(i - self.nSignals + 1)
+                    rateLine += "{0:>15}".format("%.3f" % tup[1])
+                for line in [binLine, procLine, indexLine, rateLine]:
+                    fout.write(line+"\n")
+                fout.write("-"*30 + "\n")
+                for nuisance in sorted(card["nuisances"].keys()):
+                    processScales = card["nuisances"][nuisance]
+                    line = "{0:<40}".format(nuisance)
+                    for process, _ in card["rates"]:
+                        if process in processScales:
+                            line += "{0:>15}".format("%.3f" % processScales[process])
+                        else:
+                            line += "{0:>15}".format("-")
+                    fout.write(line+"\n")
+                def makeGroups(name, prefix):
+                    group = [n.split(" ")[0] for n in card["nuisances"].keys() if prefix in n]
+                    fout.write("%s group = %s\n" % (name, " ".join(group)))
+                makeGroups("theory", "Theo_")
+                makeGroups("mcStat", "Stat_")
+                makeGroups("CMS", "CMS_")
+                for line in card["extras"]:
+                    fout.write(line+"\n")
+
+    def wsImport(self, *args):
+        # Useless RooCmdArg: https://sft.its.cern.ch/jira/browse/ROOT-6785
+        if len(args) < 2:
+            args += (ROOT.RooCmdArg(),)
+        getattr(self.w, "import")(*args)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Makes plots and combine shapes from MonoZSelector output", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+
+    def rootFileType(fileName):
+        f = ROOT.TFile.Open(fileName)
+        if not f:
+            msg = "%s is not a valid ROOT file or could not be opened!" % fileName
+            raise argparse.ArgumentTypeError(msg)
+        return f
+
+    parser.add_argument("inputFile", help="Input file(s) will be searched for datasets in order", type=rootFileType, nargs="+")
+
+    dataOpts = parser.add_argument_group("Data options")
+    dataOpts.add_argument("--asimov", help="Substitute data with Asimov mu=0 (i.e. pre-fit background expectation)", action="store_true")
+    dataOpts.add_argument("--lumi", help="Luminosity (unit: 1/pb)", type=float, default=1000.)
+
+    signalOpts = parser.add_argument_group("Signal options")
+    signalOpts.add_argument("--signal", help="Signal process plotGroup(s)", action="append")
+
+    bkgOpts = parser.add_argument_group("Background options")
+    bkgOpts.add_argument("--stack", help="Stack these plotGroups for backgrounds (bottom-up)", default="Nonresonant,ZZ2l2nu,WZ3lnu,Other,DrellYan")
+
+    callbackOpts = parser.add_argument_group("Histogram modification options")
+    callbackOpts.add_argument("--projX", help="Call TH2D::ProjectionX, with min and max Y bin", nargs=2, default=None)
+    callbackOpts.add_argument("--rebin", help="Specify alternate binning in comma-separated list", default=None)
+
+    shapeOpts = parser.add_argument_group("Shape building options")
+    shapeOpts.add_argument("--channel", "-c", help="Make shapes for channel", action="append", required=True)
+    shapeOpts.add_argument("--variable", help="Variable for which to extract shapes from", default="pfMet")
+    # shapeOpts.add_argument("--correlate", help="", action="append")
+
+    outputOpts = parser.add_argument_group("Output options")
+    outputOpts.add_argument("--outputFile", help="Output workspace filename", default="workspace.root")
+
+    args = parser.parse_args()
+
+    # -----
+    args.callback = plotting.buildCallback(args)
+
+    selectorResults = []
+    for inFile in args.inputFile:
+        res = plotting.SelectorResult(inFile, luminosity=args.lumi)
+        selectorResults.append(res)
+    anaResult = plotting.AnalysisResult(args, selectorResults)
+
+    # Suppress Info messages from TCanvas::Print() calls
+    ROOT.gErrorIgnoreLevel = ROOT.kWarning
+
+    hasHcomb = ROOT.gSystem.Load("libHiggsAnalysisCombinedLimit.so")
+    if hasHcomb != 0:
+        msg = "makeCards script requires Higgs Combine library to work. (need RooParametricHist)"
+        raise Exception(msg)
+
+    ws = Workspace(args.outputFile)
+
+    ws.nSignals = len(args.signal) if args.signal else 0
+
+    for channel in args.channel:
+        ws.addChannel(channel)
+        card = ws.cards[channel]
+        def addNuisance(nuisName, process, rate):
+            if nuisName not in card["nuisances"]:
+                card["nuisances"][nuisName] = {}
+            card["nuisances"][nuisName][process] = rate
+
+        shapeHistName = "%s_%s" % (channel, args.variable)
+
+        # Add observation
+        data_obs, = anaResult.plotGroup("Data").getShape(shapeHistName, None, args.callback)
+        card["observation"].append("bin          %s" % channel)
+        card["observation"].append("observation  %f" % data_obs.Integral())
+        # Use data histogram to extract axis info
+        ax = data_obs.GetXaxis()
+        rooVar = ROOT.RooRealVar(args.variable, ax.GetTitle(), ax.GetBinLowEdge(1), ax.GetBinUpEdge(ax.GetLast()))
+        shapeName = "data_obs_%s" % (channel, )
+        card["shapes"].append("shapes {process:<20} {channel:<10} {file:>20} workspace:{process}_{channel}".format(process="data_obs", channel=channel, file=args.outputFile))
+        checkShape(data_obs, shapeName)
+        roo_data_obs = ROOT.RooDataHist(shapeName, data_obs.GetTitle(), ROOT.RooArgList(rooVar), data_obs)
+        ws.wsImport(roo_data_obs)
+
+        def addNominal(process):
+            nominalHist, = anaResult.plotGroup(process).getShape(shapeHistName, None, args.callback)
+            shapeName = "%s_%s" % (process, channel)
+            checkShape(nominalHist, shapeName)
+            card["rates"].append((process, nominalHist.Integral()))
+            card["shapes"].append("shapes {process:<20} {channel:<10} {file:>20} workspace:{process}_{channel} workspace:{process}_{channel}_$SYSTEMATIC".format(process=process, channel=channel, file=args.outputFile))
+            roohist = ROOT.RooDataHist(shapeName, nominalHist.GetTitle(), ROOT.RooArgList(rooVar), nominalHist)
+            ws.wsImport(roohist)
+            for iBin in range(nominalHist.GetNbinsX()):
+                b = nominalHist.GetBinContent(iBin + 1)
+                if b == 0:
+                    print "Warning: Zero bin in %s_%s (%.0f-%.0f)" % (process, channel, nominalHist.GetXaxis().GetBinLowEdge(iBin + 1), nominalHist.GetXaxis().GetBinUpEdge(iBin + 1))
+                    continue
+                e = nominalHist.GetBinError(iBin + 1)
+
+                nominalHist.SetBinContent(iBin + 1, b + e)
+                shapeName = "{process}_{channel}_Stat_{process}_{channel}_Bin{bin}Up".format(process=process, channel=channel, bin=iBin)
+                roohist = ROOT.RooDataHist(shapeName, nominalHist.GetTitle(), ROOT.RooArgList(rooVar), nominalHist)
+                ws.wsImport(roohist)
+                nominalHist.SetBinContent(iBin + 1, b)
+                if b == nominalHist.Integral() and b - e <= 0.:
+                    print "Warning: Only nonzero bin in %s would be shifted to 0. Using %f instead" % (shapeName, b / 2.)
+                    nominalHist.SetBinContent(iBin + 1, b / 2.)
+                else:
+                    nominalHist.SetBinContent(iBin + 1, max(0., b - e))
+                shapeName = "{process}_{channel}_Stat_{process}_{channel}_Bin{bin}Down".format(process=process, channel=channel, bin=iBin)
+                roohist = ROOT.RooDataHist(shapeName, nominalHist.GetTitle(), ROOT.RooArgList(rooVar), nominalHist)
+                ws.wsImport(roohist)
+                nominalHist.SetBinContent(iBin + 1, b)
+
+                nuisName = "Stat_{process}_{channel}_Bin{bin} shape".format(process=process, channel=channel, bin=iBin)
+                addNuisance(nuisName, process, 1.)
+
+        def addShapeNuisance(process, nuisance, cardName):
+            histUp, histDown = anaResult.plotGroup(process).getShape(shapeHistName, nuisance, args.callback)
+            nominalHist, = anaResult.plotGroup(process).getShape(shapeHistName, None, args.callback)
+            def allBins(hist):
+                return [hist.GetBinContent(i + 1) for i in range(hist.GetNbinsX())]
+            if allBins(histUp) == allBins(histDown):
+                print "Info: shape nuisance %s has no variation for process %s, skipping" % (nuisance, process)
+                return
+
+            c = ROOT.TCanvas("%s_%s_%s" % (process, channel, cardName))
+            c.Divide(1,2)
+            c.cd(1)
+            nominalHist.SetLineColor(ROOT.kBlack)
+            nominalHist.SetLineWidth(2)
+            nominalHist.SetFillStyle(0)
+            nominalHist.Draw("hist")
+            histUp.SetLineColor(ROOT.kRed)
+            histUp.SetLineWidth(2)
+            histUp.SetFillStyle(0)
+            histUp.Draw("histsame")
+            histDown.SetLineColor(ROOT.kBlue)
+            histDown.SetLineWidth(2)
+            histDown.SetFillStyle(0)
+            histDown.Draw("histsame")
+            text = c.GetName() + " lnN %.3f / %.3f" % (histUp.Integral()/nominalHist.Integral(), histDown.Integral()/nominalHist.Integral())
+            l = ROOT.TLatex()
+            ROOT.SetOwnership(l, False)
+            l.SetNDC()
+            l.SetTextSize(1.3*ROOT.gPad.GetTopMargin())
+            l.SetTextFont(42)
+            l.SetY(1-ROOT.gPad.GetTopMargin()-.1)
+            l.SetTextAlign(33)
+            l.SetX(1-ROOT.gPad.GetRightMargin()-.1)
+            l.SetTitle(text)
+            l.Draw()
+            c.cd(2)
+            hupratio = histUp.Clone("tmpratio1")
+            hupratio.GetYaxis().SetTitle("Ratio")
+            hupratio.Divide(nominalHist)
+            hupratio.Draw("hist")
+            hupratio.GetYaxis().SetRangeUser(0.5, 1.5)
+            hdownratio = histDown.Clone("tmpratio2")
+            hdownratio.Divide(nominalHist)
+            hdownratio.Draw("histsame")
+            if not os.path.exists("shapePlots"):
+                os.makedirs("shapePlots")
+            c.Print("shapePlots/%s.pdf" % c.GetName())
+
+            shapeName = "%s_%s_%sUp" % (process, channel, cardName)
+            checkShape(histUp, shapeName)
+            roohist = ROOT.RooDataHist(shapeName, histUp.GetTitle(), ROOT.RooArgList(rooVar), histUp)
+            ws.wsImport(roohist)
+            shapeName = "%s_%s_%sDown" % (process, channel, cardName)
+            checkShape(histDown, shapeName)
+            roohist = ROOT.RooDataHist(shapeName, histDown.GetTitle(), ROOT.RooArgList(rooVar), histDown)
+            ws.wsImport(roohist)
+            nuisName = "%s shape" % cardName
+            addNuisance(nuisName, process, 1.)
+
+        # Correlated systematics common to all MC
+        for pg in anaResult.signalGroups + anaResult.stackGroups:
+            process = pg._name
+            addNominal(process)
+            #addShapeNuisance(process, "ElectronEn", "CMS_Scale_el")
+            addNuisance("CMS_Scale_el lnN", process, 1.02)
+            addShapeNuisance(process, "ElectronSF", "CMS_Eff_el")
+            #addShapeNuisance(process, "MuonEn", "CMS_Scale_mu")
+            addNuisance("CMS_Scale_mu lnN", process, 1.01)
+            addShapeNuisance(process, "MuonSF", "CMS_Eff_mu")
+            addShapeNuisance(process, "JetEn", "CMS_JES")
+            addShapeNuisance(process, "JetRes", "CMS_JER")
+            addShapeNuisance(process, "UnclusteredEn", "CMS_UES")
+            addShapeNuisance(process, "Btag", "CMS_Scale_bJet")
+            addShapeNuisance(process, "Pileup", "CMS_Scale_pileup")
+            addNuisance("CMS_lumi_2016 lnN", process, 1.03)
+
+        # Uncorrelated theory uncertainties in signal and main backgrounds
+        theoBkgs = []
+        if channel in ['ee', 'mm', 'll', 'lll']:
+            theoBkgs.append(anaResult.plotGroup("WZ3lnu"))
+        if channel in ['ee', 'mm', 'll']:
+            theoBkgs.append(anaResult.plotGroup("ZZ2l2nu"))
+        if channel in ['llll']:
+            theoBkgs.append(anaResult.plotGroup("ZZ4l"))
+        for pg in theoBkgs + anaResult.signalGroups:
+            process = pg._name
+            addShapeNuisance(process, "factRenormScale", "Theo_factRenormScale")
+            addShapeNuisance(process, "pdf", "Theo_pdf_%s" % process)
+            addShapeNuisance(process, "alphaS", "Theo_alphaS_%s" % process)
+            addShapeNuisance(process, "KFactors", "Theo_kFactors")
+
+        if channel == 'ee':
+            card["extras"].add("NRBnorm_ReSquared rateParam ee Nonresonant 1")
+        elif channel == 'mm':
+            card["extras"].add("NRBnorm_RmSquared rateParam mm Nonresonant 1")
+        elif channel == 'em':
+            card["extras"].add("NRBnorm_ReRm rateParam em Nonresonant sqrt(@0*@1) NRBnorm_ReSquared,NRBnorm_RmSquared")
+
+        # TODO: make these bin-by-bin
+        if channel in ['ee', 'mm', 'll']:
+            card["extras"].add("ZZWZNorm rateParam %s ZZ2l2nu 1." % channel)
+            card["extras"].add("ZZWZNorm rateParam %s WZ3lnu 1." % channel)
+            addNuisance("CMS_InflateDY2lNorm lnN", "DrellYan", 2.)
+            addNuisance("CMS_NonPromptLepWZinSR lnN", "WZ3lnu", 1.03)
+        elif channel == 'lll':
+            card["extras"].add("ZZWZNorm rateParam %s WZ3lnu 1." % channel)
+            addNuisance("CMS_NonPromptLepDYinWZ lnN", "NonPromptDY", 1.2)
+        elif channel == 'llll':
+            card["extras"].add("ZZWZNorm rateParam %s ZZ4l 1." % channel)
+            addNuisance("CMS_InflateOther4lNorm lnN", "Other4l", 1.4)
+
+    ws.write()
+
+
+if __name__ == "__main__":
+    main()
