@@ -1,0 +1,225 @@
+
+Event 0: run      1, lumi   81, event        23793
+PV at x,y,z = +0.106, +0.170, +2.438, ndof: 94.6, score: (pt2 of clustered objects) 6284.4
+jet   0: pt  94.0 (raw pt  81.9, matched-calojet pt  58.4), eta -1.87, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.389, pileup mva disc +0.98
+         constituent   0: pt  22.00, dz(pv) -0.001, pdgId +211
+         constituent   1: pt   8.29, dz(pv) +0.027, pdgId -211
+         constituent   2: pt   6.71, dz(pv) -0.005, pdgId +211
+         constituent   3: pt   6.44, dz(pv) +0.000, pdgId +22
+         constituent   4: pt   4.92, dz(pv) +0.004, pdgId -211
+         .....
+jet   1: pt  80.5 (raw pt  73.2, matched-calojet pt  64.7), eta -1.34, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.264, pileup mva disc +0.82
+         constituent   0: pt  61.69, dz(pv) -0.005, pdgId -11
+         constituent   1: pt   3.01, dz(pv) +0.000, pdgId +22
+         constituent   2: pt   2.48, dz(pv) +0.000, pdgId +22
+         constituent   3: pt   2.21, dz(pv) +0.000, pdgId +130
+         constituent   4: pt   1.23, dz(pv) +0.000, pdgId +22
+         .....
+jet   2: pt  30.5 (raw pt  30.9, matched-calojet pt  32.6), eta -0.86, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.102, pileup mva disc +0.51
+         constituent   0: pt  29.88, dz(pv) -0.002, pdgId +11
+         constituent   1: pt   0.40, dz(pv) -5.616, pdgId +211
+         constituent   2: pt   0.26, dz(pv) -4.091, pdgId +211
+         constituent   3: pt   0.20, dz(pv) -5.612, pdgId +211
+         constituent   4: pt   0.16, dz(pv) -2.445, pdgId +211
+
+Event 1: run      1, lumi   81, event        23796
+PV at x,y,z = +0.102, +0.171, -0.666, ndof: 106.9, score: (pt2 of clustered objects) 2354.4
+jet   0: pt  97.3 (raw pt  94.3, matched-calojet pt  84.5), eta +0.64, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.790, pileup mva disc +0.88
+         constituent   0: pt  68.06, dz(pv) +0.000, pdgId +22
+         constituent   1: pt  16.72, dz(pv) -0.046, pdgId +211
+         constituent   2: pt   1.68, dz(pv) +0.009, pdgId -211
+         constituent   3: pt   1.35, dz(pv) +0.000, pdgId +22
+         constituent   4: pt   1.25, dz(pv) +0.000, pdgId +130
+         .....
+jet   1: pt  62.2 (raw pt  61.1, matched-calojet pt  48.3), eta -0.25, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.000, pileup mva disc +0.93
+         constituent   0: pt  39.78, dz(pv) +0.006, pdgId -211
+         constituent   1: pt  10.19, dz(pv) +0.000, pdgId +130
+         constituent   2: pt   2.26, dz(pv) +0.000, pdgId +22
+         constituent   3: pt   1.72, dz(pv) +0.124, pdgId -211
+         constituent   4: pt   1.66, dz(pv) +0.000, pdgId +130
+         .....
+
+Event 2: run      1, lumi   81, event        23798
+PV at x,y,z = +0.108, +0.168, +11.472, ndof: 73.6, score: (pt2 of clustered objects) 116820.0
+jet   0: pt 290.6 (raw pt 276.3, matched-calojet pt -99999.0), eta -0.17, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.000, pileup mva disc -0.31
+         constituent   0: pt 270.50, dz(pv) +0.003, pdgId +13
+         constituent   1: pt   2.37, dz(pv) +0.000, pdgId +130
+         constituent   2: pt   1.65, dz(pv) +0.000, pdgId +130
+         constituent   3: pt   1.42, dz(pv) +0.000, pdgId +22
+         constituent   4: pt   0.55, dz(pv) +0.000, pdgId +22
+jet   1: pt  21.0 (raw pt  21.5, matched-calojet pt  13.4), eta +3.06, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.000, pileup mva disc -0.69
+         constituent   0: pt   4.00, dz(pv) +0.000, pdgId  +1
+         constituent   1: pt   3.45, dz(pv) +0.000, pdgId  +1
+         constituent   2: pt   3.27, dz(pv) +0.000, pdgId +130
+         constituent   3: pt   2.83, dz(pv) +0.000, pdgId  +1
+         constituent   4: pt   2.70, dz(pv) +0.000, pdgId +22
+         .....
+jet   2: pt  20.8 (raw pt  22.3, matched-calojet pt -99999.0), eta -0.06, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.190, pileup mva disc -0.34
+         constituent   0: pt  16.83, dz(pv) +0.006, pdgId -13
+         constituent   1: pt   1.97, dz(pv) +0.000, pdgId +130
+         constituent   2: pt   1.28, dz(pv) -16.987, pdgId +211
+         constituent   3: pt   1.15, dz(pv) +0.000, pdgId +22
+         constituent   4: pt   0.89, dz(pv) -12.629, pdgId -211
+         .....
+
+Event 3: run      1, lumi   81, event        23800
+PV at x,y,z = +0.110, +0.168, -3.524, ndof: 73.9, score: (pt2 of clustered objects) 19811.3
+jet   0: pt  97.7 (raw pt  94.2, matched-calojet pt -99999.0), eta -0.26, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.272, pileup mva disc +0.52
+         constituent   0: pt  89.38, dz(pv) -0.001, pdgId +13
+         constituent   1: pt   1.43, dz(pv) +0.000, pdgId +22
+         constituent   2: pt   0.71, dz(pv) +0.000, pdgId +22
+         constituent   3: pt   0.65, dz(pv) +0.000, pdgId +22
+         constituent   4: pt   0.53, dz(pv) +0.000, pdgId +22
+         .....
+jet   1: pt  96.2 (raw pt  92.8, matched-calojet pt  76.7), eta +0.71, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.428, pileup mva disc +0.93
+         constituent   0: pt  35.12, dz(pv) +0.000, pdgId +130
+         constituent   1: pt  13.57, dz(pv) +0.000, pdgId +22
+         constituent   2: pt   9.66, dz(pv) +0.001, pdgId +211
+         constituent   3: pt   7.21, dz(pv) +0.001, pdgId +211
+         constituent   4: pt   5.75, dz(pv) +0.350, pdgId -211
+         .....
+jet   2: pt  30.1 (raw pt  27.6, matched-calojet pt -99999.0), eta +1.16, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.000, pileup mva disc +0.44
+         constituent   0: pt  25.59, dz(pv) +0.001, pdgId -13
+         constituent   1: pt   0.93, dz(pv) +7.280, pdgId +211
+         constituent   2: pt   0.58, dz(pv) +0.836, pdgId +211
+         constituent   3: pt   0.34, dz(pv) +0.012, pdgId -211
+         constituent   4: pt   0.22, dz(pv) +0.840, pdgId +211
+
+Event 4: run      1, lumi   81, event        23818
+PV at x,y,z = +0.105, +0.173, -5.642, ndof: 17.1, score: (pt2 of clustered objects) 6776.4
+jet   0: pt  62.9 (raw pt  61.1, matched-calojet pt -99999.0), eta -0.03, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.000, pileup mva disc +0.45
+         constituent   0: pt  57.28, dz(pv) -0.001, pdgId -13
+         constituent   1: pt   1.56, dz(pv) +0.000, pdgId +130
+         constituent   2: pt   0.94, dz(pv) +0.000, pdgId +22
+         constituent   3: pt   0.70, dz(pv) +27.115, pdgId -211
+         constituent   4: pt   0.47, dz(pv) +10.377, pdgId -211
+         .....
+jet   1: pt  25.1 (raw pt  21.4, matched-calojet pt -99999.0), eta +2.14, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.000, pileup mva disc -0.04
+         constituent   0: pt  20.58, dz(pv) -0.003, pdgId +13
+         constituent   1: pt   0.82, dz(pv) -2.106, pdgId +13
+
+Event 5: run      1, lumi   81, event        23805
+PV at x,y,z = +0.107, +0.169, +2.641, ndof: 73.5, score: (pt2 of clustered objects) 30106.1
+jet   0: pt 327.2 (raw pt 290.5, matched-calojet pt 235.0), eta -1.23, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.182, pileup mva disc +1.00
+         constituent   0: pt  77.44, dz(pv) +0.000, pdgId +22
+         constituent   1: pt  32.88, dz(pv) -0.003, pdgId -211
+         constituent   2: pt  24.50, dz(pv) -0.042, pdgId +211
+         constituent   3: pt  24.36, dz(pv) -0.002, pdgId -211
+         constituent   4: pt  19.47, dz(pv) +23.540, pdgId -211
+         .....
+jet   1: pt 128.3 (raw pt 115.9, matched-calojet pt  93.9), eta -1.68, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.899, pileup mva disc +0.99
+         constituent   0: pt  24.89, dz(pv) -0.014, pdgId -211
+         constituent   1: pt  14.11, dz(pv) -0.046, pdgId +211
+         constituent   2: pt  13.24, dz(pv) +0.057, pdgId +211
+         constituent   3: pt  12.86, dz(pv) +0.000, pdgId +22
+         constituent   4: pt  10.44, dz(pv) +0.000, pdgId +130
+         .....
+jet   2: pt  97.9 (raw pt  87.2, matched-calojet pt -99999.0), eta -1.83, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.000, pileup mva disc +0.84
+         constituent   0: pt  82.44, dz(pv) +0.000, pdgId +13
+         constituent   1: pt   1.58, dz(pv) +0.000, pdgId +130
+         constituent   2: pt   0.91, dz(pv) +0.000, pdgId +22
+         constituent   3: pt   0.86, dz(pv) -6.094, pdgId -211
+         constituent   4: pt   0.44, dz(pv) -31.830, pdgId +211
+         .....
+jet   3: pt  47.7 (raw pt  41.3, matched-calojet pt  28.3), eta -2.12, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.101, pileup mva disc +1.00
+         constituent   0: pt  15.90, dz(pv) -0.002, pdgId -211
+         constituent   1: pt  11.30, dz(pv) +0.003, pdgId +211
+         constituent   2: pt   4.16, dz(pv) -0.008, pdgId -211
+         constituent   3: pt   3.67, dz(pv) +0.025, pdgId +211
+         constituent   4: pt   3.56, dz(pv) +0.007, pdgId +211
+         .....
+jet   4: pt  32.8 (raw pt  27.1, matched-calojet pt  18.4), eta +2.40, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.365, pileup mva disc -0.32
+         constituent   0: pt   5.89, dz(pv) +0.000, pdgId +22
+         constituent   1: pt   5.14, dz(pv) +0.000, pdgId +130
+         constituent   2: pt   3.21, dz(pv) +0.000, pdgId +22
+         constituent   3: pt   2.60, dz(pv) +0.053, pdgId +211
+         constituent   4: pt   1.84, dz(pv) +0.000, pdgId +22
+         .....
+
+Event 6: run      1, lumi   81, event        23810
+PV at x,y,z = +0.101, +0.168, -0.792, ndof: 174.7, score: (pt2 of clustered objects) 5682.7
+jet   0: pt  76.1 (raw pt  65.7, matched-calojet pt  52.8), eta -2.05, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.413, pileup mva disc +0.87
+         constituent   0: pt  14.60, dz(pv) +0.000, pdgId +22
+         constituent   1: pt   9.70, dz(pv) +0.000, pdgId +22
+         constituent   2: pt   8.52, dz(pv) +0.000, pdgId +22
+         constituent   3: pt   6.27, dz(pv) +0.008, pdgId +211
+         constituent   4: pt   4.54, dz(pv) -0.061, pdgId +211
+         .....
+jet   1: pt  50.2 (raw pt  51.2, matched-calojet pt -99999.0), eta +0.36, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.000, pileup mva disc +0.30
+         constituent   0: pt  46.38, dz(pv) -0.001, pdgId -13
+         constituent   1: pt   1.76, dz(pv) +0.000, pdgId +130
+         constituent   2: pt   1.31, dz(pv) +0.000, pdgId +130
+         constituent   3: pt   0.94, dz(pv) -1.149, pdgId -211
+         constituent   4: pt   0.48, dz(pv) +5.422, pdgId -211
+         .....
+jet   2: pt  48.0 (raw pt  49.1, matched-calojet pt -99999.0), eta +0.31, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.070, pileup mva disc -0.06
+         constituent   0: pt  49.06, dz(pv) -0.000, pdgId +13
+jet   3: pt  37.7 (raw pt  35.6, matched-calojet pt  14.1), eta -1.42, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.178, pileup mva disc +0.98
+         constituent   0: pt   7.86, dz(pv) -0.003, pdgId +211
+         constituent   1: pt   5.01, dz(pv) +0.005, pdgId -211
+         constituent   2: pt   4.10, dz(pv) +0.000, pdgId +130
+         constituent   3: pt   3.48, dz(pv) -0.067, pdgId -211
+         constituent   4: pt   2.19, dz(pv) -0.002, pdgId -211
+         .....
+jet   4: pt  22.5 (raw pt  24.2, matched-calojet pt  14.9), eta -0.48, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.145, pileup mva disc +0.96
+         constituent   0: pt   9.77, dz(pv) -0.000, pdgId -211
+         constituent   1: pt   3.99, dz(pv) +0.009, pdgId +211
+         constituent   2: pt   1.99, dz(pv) +0.000, pdgId +22
+         constituent   3: pt   1.88, dz(pv) -0.872, pdgId +211
+         constituent   4: pt   1.53, dz(pv) +0.000, pdgId +22
+         .....
+jet   5: pt  22.5 (raw pt  26.2, matched-calojet pt  25.3), eta -3.31, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.000, pileup mva disc -0.19
+         constituent   0: pt   4.15, dz(pv) +0.000, pdgId  +1
+         constituent   1: pt   3.76, dz(pv) +0.000, pdgId  +1
+         constituent   2: pt   3.22, dz(pv) +0.000, pdgId  +1
+         constituent   3: pt   3.20, dz(pv) +0.000, pdgId  +1
+         constituent   4: pt   2.36, dz(pv) +0.000, pdgId  +1
+         .....
+
+Event 7: run      1, lumi   81, event        23808
+PV at x,y,z = +0.104, +0.168, -3.946, ndof: 61.7, score: (pt2 of clustered objects) 5061.1
+jet   0: pt  68.3 (raw pt  68.1, matched-calojet pt -99999.0), eta +0.24, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.100, pileup mva disc +0.73
+         constituent   0: pt  57.47, dz(pv) -0.003, pdgId -13
+         constituent   1: pt   1.49, dz(pv) +0.000, pdgId +22
+         constituent   2: pt   1.24, dz(pv) +0.000, pdgId +22
+         constituent   3: pt   1.09, dz(pv) +0.000, pdgId +22
+         constituent   4: pt   1.04, dz(pv) +0.000, pdgId +22
+         .....
+
+Event 8: run      1, lumi   81, event        23827
+PV at x,y,z = +0.106, +0.168, +0.080, ndof: 82.8, score: (pt2 of clustered objects) 55931.7
+jet   0: pt 242.6 (raw pt 219.3, matched-calojet pt 213.8), eta +1.21, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.000, pileup mva disc +0.79
+         constituent   0: pt 211.12, dz(pv) +0.009, pdgId -11
+         constituent   1: pt   1.68, dz(pv) +0.000, pdgId +22
+         constituent   2: pt   1.29, dz(pv) +0.000, pdgId +130
+         constituent   3: pt   0.87, dz(pv) +21.200, pdgId +211
+         constituent   4: pt   0.86, dz(pv) +53.036, pdgId +211
+         .....
+jet   1: pt  30.1 (raw pt  25.4, matched-calojet pt  25.5), eta +2.39, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.248, pileup mva disc -0.33
+         constituent   0: pt  22.02, dz(pv) -0.004, pdgId +11
+         constituent   1: pt   1.36, dz(pv) +0.000, pdgId +22
+         constituent   2: pt   1.12, dz(pv) +0.000, pdgId +22
+         constituent   3: pt   1.03, dz(pv) +0.000, pdgId +22
+jet   2: pt  26.2 (raw pt  22.6, matched-calojet pt  21.1), eta +2.16, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.545, pileup mva disc -0.98
+         constituent   0: pt   5.64, dz(pv) +1.465, pdgId +211
+         constituent   1: pt   4.53, dz(pv) -8.128, pdgId -211
+         constituent   2: pt   3.29, dz(pv) -7.506, pdgId +211
+         constituent   3: pt   2.96, dz(pv) +0.000, pdgId +22
+         constituent   4: pt   1.27, dz(pv) -31.200, pdgId -211
+         .....
+jet   3: pt  24.5 (raw pt  21.2, matched-calojet pt  21.6), eta -4.65, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.000, pileup mva disc +0.15
+         constituent   0: pt   7.89, dz(pv) +0.000, pdgId  +1
+         constituent   1: pt   2.82, dz(pv) +0.000, pdgId  +1
+         constituent   2: pt   2.51, dz(pv) +0.000, pdgId  +1
+         constituent   3: pt   2.03, dz(pv) +0.000, pdgId  +1
+         constituent   4: pt   1.00, dz(pv) +0.000, pdgId  +1
+         .....
+
+Event 9: run      1, lumi   81, event        23811
+PV at x,y,z = +0.106, +0.172, -3.737, ndof: 236.6, score: (pt2 of clustered objects) 432.1
+jet   0: pt  29.8 (raw pt  26.2, matched-calojet pt  28.0), eta +2.45, btag run1(CSV) 0.000, run2(pfCSVIVFV2) 0.000, pileup mva disc -0.96
+         constituent   0: pt  14.18, dz(pv) +10.511, pdgId +211
+         constituent   1: pt  10.59, dz(pv) +0.000, pdgId +22
+         constituent   2: pt   0.77, dz(pv) +0.000, pdgId +22
+         constituent   3: pt   0.37, dz(pv) -3.160, pdgId +211
+         constituent   4: pt   0.25, dz(pv) -0.058, pdgId -211

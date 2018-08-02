@@ -1,0 +1,16 @@
+<lcgdict>
+  <class name="ROOT::Math::Cartesian2D<float>"/>
+  <class name="ROOT::Math::DisplacementVector2D<ROOT::Math::Cartesian2D<float>>"/>
+  <class name="EventTuple"/>
+  <class name="BTagData"/>
+  <class name="CategorizedHist"/>
+  <class name="CategorizedHist1D"/>
+  <class name="CategorizedHist2D"/>
+  <class name="ScaleFactor"/>
+  <class name="SelectorBase"/>
+  <class name="DibosonCorrections"/>
+  <class name="METResponse"/>
+  <class name="NVtxDistribution"/>
+  <class name="MonoZSelector"/>
+  <class name="PhotonSelector"/>
+</lcgdict>
