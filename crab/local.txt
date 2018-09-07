@@ -1,0 +1,5 @@
+# Copy to local.txt and change
+[local]
+campaign: monoZ_01Jan2017
+outLFNDirBase: /store/user/cfreer/monoZ_Nov2017/
+storageSite: T2_CH_CERN

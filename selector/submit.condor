@@ -1,0 +1,44 @@
+Universe             = vanilla
+Executable           = wrapRunSelector.sh
+# Note: one can either run with environment as-is or copy the libraries to
+# lib and then the condor host does not need anything more than cvmfs to be
+# able to run the selector.
+# To copy libs:
+# mkdir lib
+# cp $CMSSW_BASE/lib/$SCRAM_ARCH/libAnalysismonoZ.so lib/
+# cp $CMSSW_BASE/lib/$SCRAM_ARCH/AnalysismonoZ_xr* lib/
+#
+# This would need to be done every time you recompile of course
+GetEnv               = false
+# (possibly wisconsin-specifi) tell glideins to run job with access to cvmfs (via parrot)
++RequiresCVMFS       = True
+# for reference by our own requirements expression
++RequiresSharedFS    = false
+
+WhenToTransferOutput = On_Exit
+ShouldTransferFiles  = yes
++IsFastQueueJob      = True
+request_memory       = 1000
+request_disk         = 2048000
+Requirements         = TARGET.Arch == "X86_64" && (MY.RequiresSharedFS=!=true || TARGET.HasAFS_OSG) && (TARGET.OSG_major =!= undefined || TARGET.IS_GLIDEIN=?=true) && IsSlowSlot=!=true && (TARGET.HasParrotCVMFS=?=true || (TARGET.UWCMS_CVMFS_Exists  && 
+TARGET.CMS_CVMFS_Exists && TARGET.UWCMS_CVMFS_Revision >= 5084 && TARGET.CMS_CVMFS_Revision >= 20675 ))
+# stop jobs from running if they blow up
+periodic_hold        = DiskUsage/1024 > 10.0*2000
+
+Selector = MonoZSelector
+# Recommend randomizing file list so that one job does not
+# end up processing a bunch of the same files that take longer
+# such as Drell-Yan.  e.g.
+# mv list.txt tmp && sort -R tmp > list.txt
+Filelist = 24Apr2017
+NProcesses = 300
+
+Arguments            = $(Selector) $(Filelist).txt -b --split $(NProcesses) $(Process)
+Transfer_Input_Files = runSelector,scaleFactors.root,$(Filelist).txt,lib,userproxy
+Transfer_output_files = $(Selector)-$(Filelist)_$(Process).root
+output               = $(Selector)-$(Filelist)_$(Process).out
+error                = $(Selector)-$(Filelist)_$(Process).err
+Log                  = select.log
+
+Queue $(NProcesses)
+

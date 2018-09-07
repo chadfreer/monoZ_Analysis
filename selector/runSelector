@@ -1,0 +1,236 @@
+#!/usr/bin/env python
+import ROOT
+import argparse
+import glob
+import os
+import sys
+
+# Disentangle ROOT from argv, $HOME, and add the CMSSW library loader
+ROOT.gROOT.SetBatch(True)
+ROOT.PyConfig.IgnoreCommandLineOptions = True
+ROOT.PyConfig.DisableRootLogon = True
+ROOT.gSystem.Load("libDataFormatsFWLite.so")
+ROOT.gROOT.ProcessLineSync("FWLiteEnabler::enable();")
+
+def getDatasetCountersNames(fileList):
+    if not os.path.exists(fileList):
+        raise Exception("File list not present: %s" % fileList)
+
+    datasetName = os.path.basename(fileList).split('.')[0]
+    countersFile = os.path.join(os.path.dirname(fileList), "%sCounters.root" % datasetName)
+    return (datasetName, countersFile)
+
+
+def registerDataset(proof, inputFileList):
+    (datasetName, _) = getDatasetCountersNames(inputFileList)
+
+    filelist = ROOT.TFileCollection(datasetName, datasetName + " registered with runSelector", inputFileList)
+    proof.RegisterDataSet(datasetName, filelist, 'OVnostagedcheck:')
+
+
+def addCountersToDirectory(fileList, outputDir):
+    toWrite = {}
+    for i, fileName in enumerate(fileList):
+        print "File %4d of %4d\r" % (i+1, len(fileList)),
+        sys.stdout.flush()
+        f = ROOT.TFile.Open(fileName)
+        if not f:
+            raise Exception("Unable to open data file: %s" % fileName)
+        counters = f.GetDirectory('counters')
+        dirName = counters.Get('dataset').GetListOfKeys().First().GetName()
+        if dirName in toWrite.keys():
+            toWrite[dirName][0].Add(counters.Get('counters'))
+            toWrite[dirName][1].Add(counters.Get('sumLHEWeights'))
+            toWrite[dirName][2].Add(counters.Get('muRmuFCounts'))
+        else:
+            targetDir = outputDir.FindObject(dirName)
+            if not targetDir:
+                targetDir = outputDir.mkdir(dirName)
+            targetDir.cd()
+            toWrite[dirName] = (
+                    counters.Get('counters').Clone(),
+                    counters.Get('sumLHEWeights').Clone(),
+                    counters.Get('muRmuFCounts').Clone(),
+                    )
+            for key in counters.GetListOfKeys():
+                if key.GetClassName() == 'TDirectoryFile':
+                    obj = key.ReadObj()
+                    val = obj.GetListOfKeys().First().ReadObj()
+                    newDir = targetDir.mkdir(obj.GetName())
+                    newDir.cd()
+                    val.Write()
+    for dirName, hists in toWrite.iteritems():
+        outputDir.cd(dirName)
+        for hist in hists:
+            hist.Write()
+
+
+def makeCountersFile(inputFileList):
+    (_, countersFile) = getDatasetCountersNames(inputFileList)
+
+    print "Making counters file for dataset %s.  This may take some time..." % dataset
+    fCounters = ROOT.TFile(countersFile, 'recreate')
+
+    fileList = []
+    with open(inputFileList) as fin:
+        for fileName in fin:
+            fileList.append(fileName.strip())
+
+    addCountersToDirectory(fileList, fCounters)
+    print "Done."
+
+
+def runInteractive(select, fileName, testRun=False, batchMode=False):
+    print "Opening:", fileName
+    f = ROOT.TFile.Open(fileName)
+    dataset = f.GetDirectory('counters').Get('dataset').GetListOfKeys().First().GetName()
+    t = f.Get("events/tree")
+    t.SetCacheSize(30000000)
+    if not batchMode:
+        p = ROOT.TTreePerfStats("stats", t)
+        print "File is from dataset:", dataset
+        print "Entries in file:", t.GetEntries()
+    if testRun:
+        t.Process(select, "", 10000)
+    else:
+        t.Process(select, "")
+    if not batchMode:
+        p.Print()
+
+
+def writeOutputListItem(item, directory):
+    if item.ClassName() == "TList":
+        d = directory.mkdir(item.GetName())
+        ROOT.SetOwnership(d, False)
+        for subItem in item:
+            writeOutputListItem(subItem, d)
+    elif item.InheritsFrom("CategorizedHist"):
+        directory.cd()
+        for h in item.GetHists():
+            h.Write()
+    elif hasattr(item, 'Write'):
+        directory.cd()
+        item.Write()
+    else:
+        print "Couldn't write output item:"
+        print repr(item)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Runs a selector derived from SelectorBase', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument('--test', '-t', help='Run test job, limiting to 10k events per file or 1M events with PROOF', action='store_true')
+    parser.add_argument('--proof', '-p', help='Run using PROOF', action='store_true')
+    parser.add_argument('--workers', help='If using PROOF, spawn N workers', type=int, default=8, metavar='N')
+    parser.add_argument('--batchMode', '-b', help="Batch mode. Don't copy inputs to output file, skip TTreePerfStats.", action='store_true')
+    parser.add_argument('--split', help="Split input file list and process subsection. IJOB is zero-indexed", nargs=2, metavar=('NJOBS', 'IJOB'))
+    parser.add_argument('--register', '-r', help='Re-register file list', action='store_true')
+    parser.add_argument('--inputs', help='Objects for input list', default='scaleFactors.root')
+    parser.add_argument('--out', help='Output ROOT file', default=None, metavar='dataset.root')
+    parser.add_argument('selector', help='TSelector Object source inheiriting from SelectorBase.C', metavar='Selector.C')
+    parser.add_argument('fileList', help='List of files to process', metavar='dataset.txt')
+    parser.add_argument('flags', help='Selector flags', nargs='*')
+    args = parser.parse_args()
+    print " ------- "
+    print dir(args)
+    print " ------- "
+    try:
+        select = getattr(ROOT, args.selector)()
+    except AttributeError:
+        raise Exception("Specified selector %s does not exist!" % args.selector)
+
+    (dataset, countersFile) = getDatasetCountersNames(args.fileList)
+    if args.register or not (args.batchMode or os.path.exists(countersFile)):
+        makeCountersFile(args.fileList)
+
+    if args.proof:
+        ROOT.TProof.Open('workers=%d' % args.workers)
+        # TProof::Open returns pointer to proof-lite and messes with pyroot's
+        # inability to call virtual base class members
+        # gProof is base class type, so no issues
+        proof = ROOT.gProof
+        if args.register or proof.GetDataSet(dataset, 'S:') == None:
+            registerDataset(proof, args.fileList)
+
+        # TODO: argparse -v
+        # proof.SetLogLevel(5)
+        proof.SetParameter("PROOF_PacketizerCalibNum", 1000)
+        proof.SetParameter("PROOF_MinPacketTime", 5.)
+        proof.SetParameter("PROOF_MaxPacketTime", 30.)
+        proof.SetParameter("PROOF_StatsHist", "")
+
+    inputs = ROOT.TList()
+    select.SetInputList(inputs)
+
+    SelectorFlag = ROOT.TParameter("bool")
+    for flag in args.flags:
+        inputs.Add(SelectorFlag(flag, True))
+
+    fInputs = ROOT.TFile.Open(args.inputs)
+    if fInputs == None:
+        raise Exception("Input list file could not be loaded: %s\nNote: Specify alternate file with --input" % args.inputs)
+    for key in fInputs.GetListOfKeys():
+        obj = key.ReadObj()
+        inputs.Add(obj)
+
+    if args.proof and args.test:
+        proof.Process(dataset, select, "", 1000000)
+    elif args.proof:
+        proof.Process(dataset, select, "")
+    else:
+        files = []
+        with open(args.fileList) as fListIn:
+            lines = (line.strip() for line in fListIn)
+            map(files.append, lines)
+        if args.split:
+            njobs, ijob = map(int, args.split)
+            if njobs < 2:
+                raise Exception("If splitting, you ought to have at least two jobs...")
+            if ijob >= njobs:
+                raise Exception("Splitting error: IJOB >= NJOBS (note IJOB is zero-indexed)")
+            if njobs > len(files):
+                raise Exception("Splitting error: NJOBS > filelist size!")
+            chunkSize = len(files) / float(njobs)
+            imin = int(ijob * chunkSize)
+            imax = min(int((ijob+1)*chunkSize), len(files))
+            files = files[imin:imax]
+        try:
+            for i, fileName in enumerate(files):
+                print "File", i+1, "of", len(files)
+                runInteractive(select, fileName, args.test, args.batchMode)
+        except KeyboardInterrupt:
+            print "Exiting early! Bye."
+            pass
+
+    if args.out:
+        outputFileName = args.out
+    elif args.split:
+        outputFileName = "%s-%s_%s.root" % (args.selector, dataset, args.split[1])
+    else:
+        outputFileName = "%s-%s.root" % (args.selector, dataset)
+    tmpFileName = outputFileName.replace(".root", "_tmp.root")
+    fOut = ROOT.TFile(tmpFileName, "recreate")
+    for item in select.GetOutputList():
+        writeOutputListItem(item, fOut)
+    if args.batchMode:
+        addCountersToDirectory(files, fOut)
+        fOut.mkdir("argv").cd()
+        argList = ROOT.TObjString(' '.join(sys.argv))
+        argList.Write()
+        fOut.Close()
+        os.rename(tmpFileName, outputFileName)
+    else:
+        fOut.cd()
+        argList = ROOT.TNamed("argv", ' '.join(sys.argv))
+        argList.Write()
+        fOut.Close()
+        merger = ROOT.TFileMerger()
+        merger.OutputFile(outputFileName)
+        merger.AddFile(tmpFileName)
+        if not args.batchMode:
+            merger.AddFile(fInputs)
+            merger.AddFile(countersFile)
+        merger.Merge()
+        os.remove(tmpFileName)
+
+# vim: set ts=4 sw=4 tw=0 et :
+

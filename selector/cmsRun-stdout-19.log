@@ -1,0 +1,654 @@
+Beginning CMSSW wrapper script
+ slc6_amd64_gcc530 scramv1 CMSSW
+Performing SCRAM setup...
+Completed SCRAM setup
+Retrieving SCRAM project...
+Untarring  /tmp/366792.1.cloud.cms.q/glide_utoBHK/execute/dir_6065/sandbox.tar.gz
+Completed SCRAM project
+Executing CMSSW
+cmsRun  -j FrameworkJobReport.xml PSet.py
+%MSG-i ThreadSetup:  (NoModuleName) 24-Nov-2017 23:52:19 CET pre-events
+setting # threads 1
+%MSG
+24-Nov-2017 23:52:28 CET  Initiating request to open file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/8E0CD538-5DC1-E611-A0C9-1866DAEA8220.root
+24-Nov-2017 23:52:45 CET  Successfully opened file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/8E0CD538-5DC1-E611-A0C9-1866DAEA8220.root
+[STATUS] Reading energy scale correction  values from file: EgammaAnalysis/ElectronTools/data/ScalesSmearings/Moriond17_23Jan_ele_scales.dat
+[STATUS] Reading energy scale correction  values from file: EgammaAnalysis/ElectronTools/data/ScalesSmearings/Moriond17_23Jan_ele_scales.dat
+[STATUS] Reading energy scale correction  values from file: EgammaAnalysis/ElectronTools/data/ScalesSmearings/Moriond17_23Jan_ele_scales.dat
+[STATUS] Reading energy scale correction  values from file: EgammaAnalysis/ElectronTools/data/ScalesSmearings/Moriond17_23Jan_ele_scales.dat
+Begin processing the 1st record. Run 1, Event 1607403, LumiSection 8461 at 24-Nov-2017 23:53:54.262 CET
+Begin processing the 1001st record. Run 1, Event 2688326, LumiSection 14150 at 24-Nov-2017 23:55:09.521 CET
+Begin processing the 2001st record. Run 1, Event 3790164, LumiSection 19949 at 24-Nov-2017 23:56:21.062 CET
+Begin processing the 3001st record. Run 1, Event 8467446, LumiSection 44566 at 24-Nov-2017 23:57:25.368 CET
+Begin processing the 4001st record. Run 1, Event 19483864, LumiSection 102547 at 24-Nov-2017 23:58:35.719 CET
+Begin processing the 5001st record. Run 1, Event 32640466, LumiSection 171792 at 24-Nov-2017 23:59:41.777 CET
+Begin processing the 6001st record. Run 1, Event 38036682, LumiSection 200193 at 25-Nov-2017 00:00:54.045 CET
+Begin processing the 7001st record. Run 1, Event 43464081, LumiSection 228759 at 25-Nov-2017 00:02:14.713 CET
+Begin processing the 8001st record. Run 1, Event 52612440, LumiSection 276908 at 25-Nov-2017 00:03:34.733 CET
+Begin processing the 9001st record. Run 1, Event 57084520, LumiSection 300445 at 25-Nov-2017 00:04:47.530 CET
+Begin processing the 10001st record. Run 1, Event 57897940, LumiSection 304726 at 25-Nov-2017 00:05:56.679 CET
+Begin processing the 11001st record. Run 1, Event 69042447, LumiSection 363382 at 25-Nov-2017 00:07:06.989 CET
+Begin processing the 12001st record. Run 1, Event 2397902, LumiSection 12621 at 25-Nov-2017 00:08:16.592 CET
+Begin processing the 13001st record. Run 1, Event 14936288, LumiSection 78613 at 25-Nov-2017 00:09:34.582 CET
+Begin processing the 14001st record. Run 1, Event 17702524, LumiSection 93172 at 25-Nov-2017 00:10:35.841 CET
+Begin processing the 15001st record. Run 1, Event 24193145, LumiSection 127333 at 25-Nov-2017 00:11:41.047 CET
+Begin processing the 16001st record. Run 1, Event 28081872, LumiSection 147800 at 25-Nov-2017 00:13:00.911 CET
+Begin processing the 17001st record. Run 1, Event 30812047, LumiSection 162169 at 25-Nov-2017 00:13:57.641 CET
+Begin processing the 18001st record. Run 1, Event 30272269, LumiSection 159328 at 25-Nov-2017 00:14:55.032 CET
+Begin processing the 19001st record. Run 1, Event 43665203, LumiSection 229817 at 25-Nov-2017 00:16:10.359 CET
+Begin processing the 20001st record. Run 1, Event 44671687, LumiSection 235114 at 25-Nov-2017 00:17:03.696 CET
+Begin processing the 21001st record. Run 1, Event 53549849, LumiSection 281842 at 25-Nov-2017 00:18:13.035 CET
+Begin processing the 22001st record. Run 1, Event 59044927, LumiSection 310763 at 25-Nov-2017 00:19:23.196 CET
+Begin processing the 23001st record. Run 1, Event 64675634, LumiSection 340399 at 25-Nov-2017 00:20:34.862 CET
+Begin processing the 24001st record. Run 1, Event 64696425, LumiSection 340508 at 25-Nov-2017 00:21:47.705 CET
+Begin processing the 25001st record. Run 1, Event 9745597, LumiSection 51293 at 25-Nov-2017 00:22:53.858 CET
+Begin processing the 26001st record. Run 1, Event 51455844, LumiSection 270821 at 25-Nov-2017 00:24:06.396 CET
+Begin processing the 27001st record. Run 1, Event 64103995, LumiSection 337390 at 25-Nov-2017 00:25:13.038 CET
+Begin processing the 28001st record. Run 1, Event 64676541, LumiSection 340403 at 25-Nov-2017 00:26:03.548 CET
+Begin processing the 29001st record. Run 1, Event 64752780, LumiSection 340804 at 25-Nov-2017 00:27:18.504 CET
+Begin processing the 30001st record. Run 1, Event 78820183, LumiSection 414843 at 25-Nov-2017 00:28:24.513 CET
+Begin processing the 31001st record. Run 1, Event 18904720, LumiSection 99499 at 25-Nov-2017 00:29:43.876 CET
+Begin processing the 32001st record. Run 1, Event 21067561, LumiSection 110882 at 25-Nov-2017 00:31:07.150 CET
+Begin processing the 33001st record. Run 1, Event 24475282, LumiSection 128818 at 25-Nov-2017 00:32:05.708 CET
+Begin processing the 34001st record. Run 1, Event 33328783, LumiSection 175415 at 25-Nov-2017 00:33:06.206 CET
+Begin processing the 35001st record. Run 1, Event 53888606, LumiSection 283625 at 25-Nov-2017 00:34:22.622 CET
+Begin processing the 36001st record. Run 1, Event 64241540, LumiSection 338114 at 25-Nov-2017 00:35:28.302 CET
+Begin processing the 37001st record. Run 1, Event 68082798, LumiSection 358331 at 25-Nov-2017 00:36:26.431 CET
+Begin processing the 38001st record. Run 1, Event 77796260, LumiSection 409454 at 25-Nov-2017 00:37:26.862 CET
+Begin processing the 39001st record. Run 1, Event 79217293, LumiSection 416933 at 25-Nov-2017 00:38:29.941 CET
+Begin processing the 40001st record. Run 1, Event 79395743, LumiSection 417873 at 25-Nov-2017 00:39:47.463 CET
+Begin processing the 41001st record. Run 1, Event 37188241, LumiSection 195728 at 25-Nov-2017 00:40:54.675 CET
+Begin processing the 42001st record. Run 1, Event 33511664, LumiSection 176378 at 25-Nov-2017 00:41:53.746 CET
+Begin processing the 43001st record. Run 1, Event 30759159, LumiSection 161891 at 25-Nov-2017 00:43:06.656 CET
+Begin processing the 44001st record. Run 1, Event 32751339, LumiSection 172376 at 25-Nov-2017 00:44:05.968 CET
+Begin processing the 45001st record. Run 1, Event 38949370, LumiSection 204997 at 25-Nov-2017 00:45:05.638 CET
+Begin processing the 46001st record. Run 1, Event 42638682, LumiSection 224415 at 25-Nov-2017 00:46:13.538 CET
+Begin processing the 47001st record. Run 1, Event 49124796, LumiSection 258552 at 25-Nov-2017 00:47:05.302 CET
+Begin processing the 48001st record. Run 1, Event 59859304, LumiSection 315049 at 25-Nov-2017 00:48:07.558 CET
+Begin processing the 49001st record. Run 1, Event 75517801, LumiSection 397462 at 25-Nov-2017 00:49:16.924 CET
+Begin processing the 50001st record. Run 1, Event 76186035, LumiSection 400979 at 25-Nov-2017 00:50:26.437 CET
+Begin processing the 51001st record. Run 1, Event 42793761, LumiSection 225231 at 25-Nov-2017 00:51:55.213 CET
+Begin processing the 52001st record. Run 1, Event 43664922, LumiSection 229816 at 25-Nov-2017 00:53:01.176 CET
+Begin processing the 53001st record. Run 1, Event 47494380, LumiSection 249971 at 25-Nov-2017 00:53:57.650 CET
+Begin processing the 54001st record. Run 1, Event 59259772, LumiSection 311894 at 25-Nov-2017 00:55:11.667 CET
+Begin processing the 55001st record. Run 1, Event 70410319, LumiSection 370581 at 25-Nov-2017 00:56:20.516 CET
+Begin processing the 56001st record. Run 1, Event 70852103, LumiSection 372906 at 25-Nov-2017 00:57:18.261 CET
+Begin processing the 57001st record. Run 1, Event 79396260, LumiSection 417875 at 25-Nov-2017 00:58:29.201 CET
+25-Nov-2017 00:59:05 CET  Closed file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/8E0CD538-5DC1-E611-A0C9-1866DAEA8220.root
+25-Nov-2017 00:59:05 CET  Initiating request to open file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/903823E1-60C1-E611-B6AF-0025905A48BC.root
+25-Nov-2017 00:59:06 CET  Successfully opened file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/903823E1-60C1-E611-B6AF-0025905A48BC.root
+Begin processing the 58001st record. Run 1, Event 532804, LumiSection 2805 at 25-Nov-2017 00:59:53.945 CET
+Begin processing the 59001st record. Run 1, Event 8270585, LumiSection 43530 at 25-Nov-2017 01:01:12.162 CET
+Begin processing the 60001st record. Run 1, Event 14806403, LumiSection 77929 at 25-Nov-2017 01:02:23.816 CET
+Begin processing the 61001st record. Run 1, Event 17566941, LumiSection 92458 at 25-Nov-2017 01:03:29.217 CET
+Begin processing the 62001st record. Run 1, Event 19653805, LumiSection 103442 at 25-Nov-2017 01:04:42.235 CET
+Begin processing the 63001st record. Run 1, Event 27474862, LumiSection 144605 at 25-Nov-2017 01:05:44.728 CET
+Begin processing the 64001st record. Run 1, Event 30418940, LumiSection 160100 at 25-Nov-2017 01:07:07.152 CET
+Begin processing the 65001st record. Run 1, Event 31113397, LumiSection 163755 at 25-Nov-2017 01:08:27.612 CET
+Begin processing the 66001st record. Run 1, Event 39803823, LumiSection 209494 at 25-Nov-2017 01:09:43.432 CET
+Begin processing the 67001st record. Run 1, Event 46936661, LumiSection 247035 at 25-Nov-2017 01:10:48.794 CET
+Begin processing the 68001st record. Run 1, Event 54680886, LumiSection 287794 at 25-Nov-2017 01:12:10.239 CET
+Begin processing the 69001st record. Run 1, Event 60929760, LumiSection 320683 at 25-Nov-2017 01:13:27.014 CET
+Begin processing the 70001st record. Run 1, Event 2244704, LumiSection 11815 at 25-Nov-2017 01:14:46.207 CET
+Begin processing the 71001st record. Run 1, Event 15987665, LumiSection 84146 at 25-Nov-2017 01:15:48.832 CET
+Begin processing the 72001st record. Run 1, Event 11997180, LumiSection 63143 at 25-Nov-2017 01:16:55.421 CET
+Begin processing the 73001st record. Run 1, Event 19968665, LumiSection 105099 at 25-Nov-2017 01:18:01.010 CET
+Begin processing the 74001st record. Run 1, Event 22457884, LumiSection 118200 at 25-Nov-2017 01:19:17.790 CET
+Begin processing the 75001st record. Run 1, Event 36720282, LumiSection 193265 at 25-Nov-2017 01:20:29.055 CET
+Begin processing the 76001st record. Run 1, Event 38689324, LumiSection 203629 at 25-Nov-2017 01:21:29.030 CET
+Begin processing the 77001st record. Run 1, Event 38979484, LumiSection 205156 at 25-Nov-2017 01:22:51.470 CET
+Begin processing the 78001st record. Run 1, Event 56059162, LumiSection 295049 at 25-Nov-2017 01:24:14.972 CET
+Begin processing the 79001st record. Run 1, Event 57289088, LumiSection 301522 at 25-Nov-2017 01:25:29.308 CET
+Begin processing the 80001st record. Run 1, Event 66019863, LumiSection 347473 at 25-Nov-2017 01:26:49.418 CET
+Begin processing the 81001st record. Run 1, Event 70154162, LumiSection 369233 at 25-Nov-2017 01:28:10.954 CET
+Begin processing the 82001st record. Run 1, Event 2533042, LumiSection 13332 at 25-Nov-2017 01:29:44.520 CET
+Begin processing the 83001st record. Run 1, Event 12512466, LumiSection 65855 at 25-Nov-2017 01:31:12.099 CET
+Begin processing the 84001st record. Run 1, Event 18290639, LumiSection 96267 at 25-Nov-2017 01:32:21.333 CET
+Begin processing the 85001st record. Run 1, Event 33327906, LumiSection 175411 at 25-Nov-2017 01:33:35.757 CET
+Begin processing the 86001st record. Run 1, Event 38331966, LumiSection 201748 at 25-Nov-2017 01:34:55.029 CET
+Begin processing the 87001st record. Run 1, Event 45205222, LumiSection 237923 at 25-Nov-2017 01:36:12.825 CET
+Begin processing the 88001st record. Run 1, Event 49439042, LumiSection 260206 at 25-Nov-2017 01:37:30.371 CET
+Begin processing the 89001st record. Run 1, Event 58620463, LumiSection 308529 at 25-Nov-2017 01:38:45.543 CET
+Begin processing the 90001st record. Run 1, Event 64426679, LumiSection 339088 at 25-Nov-2017 01:40:12.385 CET
+Begin processing the 91001st record. Run 1, Event 5969224, LumiSection 31417 at 25-Nov-2017 01:41:30.258 CET
+Begin processing the 92001st record. Run 1, Event 8011559, LumiSection 42166 at 25-Nov-2017 01:42:38.016 CET
+Begin processing the 93001st record. Run 1, Event 9710018, LumiSection 51106 at 25-Nov-2017 01:43:55.809 CET
+Begin processing the 94001st record. Run 1, Event 40197982, LumiSection 211569 at 25-Nov-2017 01:45:01.350 CET
+Begin processing the 95001st record. Run 1, Event 44708482, LumiSection 235308 at 25-Nov-2017 01:46:23.923 CET
+Begin processing the 96001st record. Run 1, Event 65122719, LumiSection 342752 at 25-Nov-2017 01:47:43.803 CET
+Begin processing the 97001st record. Run 1, Event 53222919, LumiSection 280121 at 25-Nov-2017 01:48:55.290 CET
+Begin processing the 98001st record. Run 1, Event 54670180, LumiSection 287738 at 25-Nov-2017 01:50:10.037 CET
+[WARNING] Smearing category not found: 
+1 1	4.73939 4.73939	0.705566 0.705566	0.342158 0.342158
+Begin processing the 99001st record. Run 1, Event 63200665, LumiSection 332636 at 25-Nov-2017 01:51:26.740 CET
+Begin processing the 100001st record. Run 1, Event 62998346, LumiSection 331571 at 25-Nov-2017 01:52:55.798 CET
+Begin processing the 101001st record. Run 1, Event 72925717, LumiSection 383820 at 25-Nov-2017 01:54:14.383 CET
+Begin processing the 102001st record. Run 1, Event 79100557, LumiSection 416319 at 25-Nov-2017 01:56:09.521 CET
+Begin processing the 103001st record. Run 1, Event 79240245, LumiSection 417054 at 25-Nov-2017 01:57:45.296 CET
+Begin processing the 104001st record. Run 1, Event 13191585, LumiSection 69430 at 25-Nov-2017 01:59:46.109 CET
+Begin processing the 105001st record. Run 1, Event 19401022, LumiSection 102111 at 25-Nov-2017 02:01:35.448 CET
+Begin processing the 106001st record. Run 1, Event 26243892, LumiSection 138126 at 25-Nov-2017 02:03:33.069 CET
+Begin processing the 107001st record. Run 1, Event 67462794, LumiSection 355068 at 25-Nov-2017 02:05:53.971 CET
+Begin processing the 108001st record. Run 1, Event 73702285, LumiSection 387907 at 25-Nov-2017 02:08:13.583 CET
+Begin processing the 109001st record. Run 1, Event 73908143, LumiSection 388991 at 25-Nov-2017 02:10:09.511 CET
+Begin processing the 110001st record. Run 1, Event 78466180, LumiSection 412980 at 25-Nov-2017 02:12:26.070 CET
+25-Nov-2017 02:13:10 CET  Closed file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/903823E1-60C1-E611-B6AF-0025905A48BC.root
+25-Nov-2017 02:13:10 CET  Initiating request to open file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/90516566-67C1-E611-86C0-02163E00B665.root
+25-Nov-2017 02:13:10 CET  Successfully opened file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/90516566-67C1-E611-86C0-02163E00B665.root
+Begin processing the 111001st record. Run 1, Event 1274022, LumiSection 6706 at 25-Nov-2017 02:15:10.907 CET
+Begin processing the 112001st record. Run 1, Event 23485645, LumiSection 123609 at 25-Nov-2017 02:17:40.942 CET
+Begin processing the 113001st record. Run 1, Event 33936682, LumiSection 178615 at 25-Nov-2017 02:20:13.927 CET
+Begin processing the 114001st record. Run 1, Event 71098256, LumiSection 374202 at 25-Nov-2017 02:22:44.670 CET
+Begin processing the 115001st record. Run 1, Event 77290266, LumiSection 406791 at 25-Nov-2017 02:25:00.900 CET
+Begin processing the 116001st record. Run 1, Event 77404521, LumiSection 407393 at 25-Nov-2017 02:27:29.646 CET
+[WARNING] Smearing category not found: 
+1 1	3.03909 3.03909	0.727639 0.727639	1.03276 1.03276
+Begin processing the 117001st record. Run 1, Event 77857365, LumiSection 409776 at 25-Nov-2017 02:29:54.325 CET
+Begin processing the 118001st record. Run 1, Event 78613380, LumiSection 413755 at 25-Nov-2017 02:32:24.630 CET
+Begin processing the 119001st record. Run 1, Event 79753584, LumiSection 419756 at 25-Nov-2017 02:34:58.678 CET
+Begin processing the 120001st record. Run 1, Event 1451003, LumiSection 7637 at 25-Nov-2017 02:37:21.879 CET
+Begin processing the 121001st record. Run 1, Event 17823604, LumiSection 93809 at 25-Nov-2017 02:39:44.117 CET
+Begin processing the 122001st record. Run 1, Event 23832401, LumiSection 125434 at 25-Nov-2017 02:42:23.392 CET
+Begin processing the 123001st record. Run 1, Event 28947436, LumiSection 152355 at 25-Nov-2017 02:44:56.997 CET
+Begin processing the 124001st record. Run 1, Event 38052870, LumiSection 200279 at 25-Nov-2017 02:47:15.878 CET
+Begin processing the 125001st record. Run 1, Event 71789906, LumiSection 377842 at 25-Nov-2017 02:49:28.861 CET
+Begin processing the 126001st record. Run 1, Event 4533918, LumiSection 23863 at 25-Nov-2017 02:52:02.454 CET
+Begin processing the 127001st record. Run 1, Event 12926065, LumiSection 68032 at 25-Nov-2017 02:54:36.268 CET
+Begin processing the 128001st record. Run 1, Event 17796402, LumiSection 93666 at 25-Nov-2017 02:57:11.432 CET
+Begin processing the 129001st record. Run 1, Event 33966025, LumiSection 178769 at 25-Nov-2017 02:59:28.286 CET
+Begin processing the 130001st record. Run 1, Event 39780283, LumiSection 209370 at 25-Nov-2017 03:01:37.209 CET
+Begin processing the 131001st record. Run 1, Event 41719343, LumiSection 219576 at 25-Nov-2017 03:03:59.001 CET
+Begin processing the 132001st record. Run 1, Event 53655799, LumiSection 282399 at 25-Nov-2017 03:06:20.609 CET
+Begin processing the 133001st record. Run 1, Event 56845384, LumiSection 299187 at 25-Nov-2017 03:08:45.012 CET
+Begin processing the 134001st record. Run 1, Event 61440184, LumiSection 323370 at 25-Nov-2017 03:10:46.491 CET
+Begin processing the 135001st record. Run 1, Event 78554855, LumiSection 413447 at 25-Nov-2017 03:13:06.004 CET
+Begin processing the 136001st record. Run 1, Event 28190722, LumiSection 148373 at 25-Nov-2017 03:15:46.011 CET
+Begin processing the 137001st record. Run 1, Event 39519965, LumiSection 208000 at 25-Nov-2017 03:18:03.810 CET
+Begin processing the 138001st record. Run 1, Event 44882039, LumiSection 236222 at 25-Nov-2017 03:20:14.675 CET
+Begin processing the 139001st record. Run 1, Event 58013504, LumiSection 305335 at 25-Nov-2017 03:22:20.059 CET
+Begin processing the 140001st record. Run 1, Event 59536404, LumiSection 313350 at 25-Nov-2017 03:24:39.435 CET
+Begin processing the 141001st record. Run 1, Event 73389143, LumiSection 386259 at 25-Nov-2017 03:27:00.622 CET
+Begin processing the 142001st record. Run 1, Event 11688782, LumiSection 61520 at 25-Nov-2017 03:29:43.003 CET
+Begin processing the 143001st record. Run 1, Event 16176821, LumiSection 85142 at 25-Nov-2017 03:31:42.006 CET
+Begin processing the 144001st record. Run 1, Event 17591364, LumiSection 92587 at 25-Nov-2017 03:34:05.109 CET
+Begin processing the 145001st record. Run 1, Event 20009897, LumiSection 105316 at 25-Nov-2017 03:36:25.354 CET
+Begin processing the 146001st record. Run 1, Event 28780175, LumiSection 151475 at 25-Nov-2017 03:38:48.572 CET
+Begin processing the 147001st record. Run 1, Event 32534464, LumiSection 171235 at 25-Nov-2017 03:40:56.815 CET
+Begin processing the 148001st record. Run 1, Event 34434705, LumiSection 181236 at 25-Nov-2017 03:43:20.015 CET
+[WARNING] Smearing category not found: 
+1 1	3.69556 3.69556	0.814519 0.814519	0.567901 0.567901
+Begin processing the 149001st record. Run 1, Event 36639320, LumiSection 192839 at 25-Nov-2017 03:45:48.126 CET
+Begin processing the 150001st record. Run 1, Event 43939744, LumiSection 231262 at 25-Nov-2017 03:48:04.619 CET
+Begin processing the 151001st record. Run 1, Event 45871107, LumiSection 241427 at 25-Nov-2017 03:50:11.073 CET
+Begin processing the 152001st record. Run 1, Event 47914980, LumiSection 252184 at 25-Nov-2017 03:52:33.119 CET
+Begin processing the 153001st record. Run 1, Event 52359364, LumiSection 275576 at 25-Nov-2017 03:54:55.816 CET
+Begin processing the 154001st record. Run 1, Event 36208782, LumiSection 190573 at 25-Nov-2017 03:57:26.438 CET
+Begin processing the 155001st record. Run 1, Event 36627753, LumiSection 192778 at 25-Nov-2017 04:00:00.386 CET
+Begin processing the 156001st record. Run 1, Event 38679619, LumiSection 203577 at 25-Nov-2017 04:02:05.036 CET
+Begin processing the 157001st record. Run 1, Event 40132185, LumiSection 211222 at 25-Nov-2017 04:04:29.143 CET
+Begin processing the 158001st record. Run 1, Event 46817739, LumiSection 246410 at 25-Nov-2017 04:06:52.293 CET
+Begin processing the 159001st record. Run 1, Event 47194144, LumiSection 248391 at 25-Nov-2017 04:09:17.100 CET
+Begin processing the 160001st record. Run 1, Event 56374025, LumiSection 296706 at 25-Nov-2017 04:11:19.562 CET
+Begin processing the 161001st record. Run 1, Event 63457443, LumiSection 333987 at 25-Nov-2017 04:13:44.363 CET
+Begin processing the 162001st record. Run 1, Event 67488338, LumiSection 355202 at 25-Nov-2017 04:16:08.415 CET
+Begin processing the 163001st record. Run 1, Event 70164121, LumiSection 369285 at 25-Nov-2017 04:18:32.219 CET
+Begin processing the 164001st record. Run 1, Event 72062082, LumiSection 379275 at 25-Nov-2017 04:20:53.303 CET
+Begin processing the 165001st record. Run 1, Event 73040457, LumiSection 384424 at 25-Nov-2017 04:22:52.919 CET
+Begin processing the 166001st record. Run 1, Event 73259205, LumiSection 385575 at 25-Nov-2017 04:25:11.750 CET
+25-Nov-2017 04:25:46 CET  Closed file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/90516566-67C1-E611-86C0-02163E00B665.root
+25-Nov-2017 04:25:46 CET  Initiating request to open file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/92B7EF19-4EC1-E611-8936-484D7E8DF092.root
+25-Nov-2017 04:25:46 CET  Successfully opened file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/92B7EF19-4EC1-E611-8936-484D7E8DF092.root
+Begin processing the 167001st record. Run 1, Event 37899681, LumiSection 199472 at 25-Nov-2017 04:27:58.907 CET
+Begin processing the 168001st record. Run 1, Event 13203378, LumiSection 69492 at 25-Nov-2017 04:30:15.561 CET
+Begin processing the 169001st record. Run 1, Event 19330004, LumiSection 101737 at 25-Nov-2017 04:32:22.349 CET
+Begin processing the 170001st record. Run 1, Event 17204495, LumiSection 90550 at 25-Nov-2017 04:34:45.673 CET
+Begin processing the 171001st record. Run 1, Event 20504663, LumiSection 107920 at 25-Nov-2017 04:37:06.353 CET
+Begin processing the 172001st record. Run 1, Event 20778526, LumiSection 109361 at 25-Nov-2017 04:39:25.422 CET
+Begin processing the 173001st record. Run 1, Event 22717524, LumiSection 119566 at 25-Nov-2017 04:41:46.466 CET
+[WARNING] Smearing category not found: 
+1 1	3.70935 3.70935	0.621345 0.621345	0 0
+Begin processing the 174001st record. Run 1, Event 30624766, LumiSection 161183 at 25-Nov-2017 04:43:56.965 CET
+Begin processing the 175001st record. Run 1, Event 32908784, LumiSection 173205 at 25-Nov-2017 04:46:13.782 CET
+Begin processing the 176001st record. Run 1, Event 48276983, LumiSection 254090 at 25-Nov-2017 04:48:35.614 CET
+Begin processing the 177001st record. Run 1, Event 57080727, LumiSection 300425 at 25-Nov-2017 04:50:56.670 CET
+Begin processing the 178001st record. Run 1, Event 64357605, LumiSection 338725 at 25-Nov-2017 04:53:06.581 CET
+Begin processing the 179001st record. Run 1, Event 5208963, LumiSection 27416 at 25-Nov-2017 04:55:39.464 CET
+Begin processing the 180001st record. Run 1, Event 12211780, LumiSection 64273 at 25-Nov-2017 04:58:05.711 CET
+Begin processing the 181001st record. Run 1, Event 15183622, LumiSection 79914 at 25-Nov-2017 05:00:30.669 CET
+Begin processing the 182001st record. Run 1, Event 16725898, LumiSection 88031 at 25-Nov-2017 05:02:51.891 CET
+Begin processing the 183001st record. Run 1, Event 22702440, LumiSection 119487 at 25-Nov-2017 05:04:54.527 CET
+Begin processing the 184001st record. Run 1, Event 38116245, LumiSection 200612 at 25-Nov-2017 05:07:16.439 CET
+Begin processing the 185001st record. Run 1, Event 56064606, LumiSection 295077 at 25-Nov-2017 05:09:38.667 CET
+Begin processing the 186001st record. Run 1, Event 65572805, LumiSection 345121 at 25-Nov-2017 05:11:56.492 CET
+Begin processing the 187001st record. Run 1, Event 74552041, LumiSection 392380 at 25-Nov-2017 05:14:03.346 CET
+Begin processing the 188001st record. Run 1, Event 75367394, LumiSection 396671 at 25-Nov-2017 05:16:15.478 CET
+Begin processing the 189001st record. Run 1, Event 77322358, LumiSection 406960 at 25-Nov-2017 05:18:35.968 CET
+Begin processing the 190001st record. Run 1, Event 43464623, LumiSection 228761 at 25-Nov-2017 05:21:06.747 CET
+Begin processing the 191001st record. Run 1, Event 47757319, LumiSection 251355 at 25-Nov-2017 05:23:10.358 CET
+Begin processing the 192001st record. Run 1, Event 59730595, LumiSection 314372 at 25-Nov-2017 05:25:27.964 CET
+Begin processing the 193001st record. Run 1, Event 64149836, LumiSection 337631 at 25-Nov-2017 05:27:42.837 CET
+Begin processing the 194001st record. Run 1, Event 65577724, LumiSection 345146 at 25-Nov-2017 05:29:45.776 CET
+Begin processing the 195001st record. Run 1, Event 72643643, LumiSection 382335 at 25-Nov-2017 05:32:12.217 CET
+Begin processing the 196001st record. Run 1, Event 76326845, LumiSection 401721 at 25-Nov-2017 05:34:30.304 CET
+Begin processing the 197001st record. Run 1, Event 10097601, LumiSection 53146 at 25-Nov-2017 05:36:56.401 CET
+Begin processing the 198001st record. Run 1, Event 13045032, LumiSection 68659 at 25-Nov-2017 05:39:07.131 CET
+Begin processing the 199001st record. Run 1, Event 26404162, LumiSection 138970 at 25-Nov-2017 05:41:12.788 CET
+Begin processing the 200001st record. Run 1, Event 59820492, LumiSection 314845 at 25-Nov-2017 05:43:29.691 CET
+Begin processing the 201001st record. Run 1, Event 54915341, LumiSection 289029 at 25-Nov-2017 05:45:48.886 CET
+Begin processing the 202001st record. Run 1, Event 55405805, LumiSection 291610 at 25-Nov-2017 05:47:46.960 CET
+Begin processing the 203001st record. Run 1, Event 72306165, LumiSection 380559 at 25-Nov-2017 05:50:01.319 CET
+Begin processing the 204001st record. Run 1, Event 78432726, LumiSection 412804 at 25-Nov-2017 05:52:11.236 CET
+Begin processing the 205001st record. Run 1, Event 17209284, LumiSection 90575 at 25-Nov-2017 05:54:37.927 CET
+Begin processing the 206001st record. Run 1, Event 24016073, LumiSection 126401 at 25-Nov-2017 05:56:39.867 CET
+Begin processing the 207001st record. Run 1, Event 49700933, LumiSection 261584 at 25-Nov-2017 05:58:54.833 CET
+Begin processing the 208001st record. Run 1, Event 55407302, LumiSection 291618 at 25-Nov-2017 06:01:09.674 CET
+Begin processing the 209001st record. Run 1, Event 56414923, LumiSection 296921 at 25-Nov-2017 06:03:22.319 CET
+Begin processing the 210001st record. Run 1, Event 67425706, LumiSection 354873 at 25-Nov-2017 06:05:26.432 CET
+Begin processing the 211001st record. Run 1, Event 78574763, LumiSection 413552 at 25-Nov-2017 06:07:44.454 CET
+Begin processing the 212001st record. Run 1, Event 34352882, LumiSection 180805 at 25-Nov-2017 06:10:10.957 CET
+Begin processing the 213001st record. Run 1, Event 19925635, LumiSection 104872 at 25-Nov-2017 06:12:29.005 CET
+Begin processing the 214001st record. Run 1, Event 34360862, LumiSection 180847 at 25-Nov-2017 06:14:30.722 CET
+Begin processing the 215001st record. Run 1, Event 49062502, LumiSection 258224 at 25-Nov-2017 06:16:48.200 CET
+Begin processing the 216001st record. Run 1, Event 62730959, LumiSection 330163 at 25-Nov-2017 06:19:05.251 CET
+Begin processing the 217001st record. Run 1, Event 62553385, LumiSection 329229 at 25-Nov-2017 06:21:06.604 CET
+[WARNING] Smearing category not found: 
+1 1	4.37147 4.37147	0.520649 0.520649	0 0
+Begin processing the 218001st record. Run 1, Event 68690265, LumiSection 361528 at 25-Nov-2017 06:23:23.519 CET
+Begin processing the 219001st record. Run 1, Event 69619618, LumiSection 366419 at 25-Nov-2017 06:25:41.271 CET
+25-Nov-2017 06:25:59 CET  Closed file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/92B7EF19-4EC1-E611-8936-484D7E8DF092.root
+25-Nov-2017 06:25:59 CET  Initiating request to open file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/92D0C872-53C1-E611-AA9B-141877637B68.root
+25-Nov-2017 06:25:59 CET  Successfully opened file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/92D0C872-53C1-E611-AA9B-141877637B68.root
+Begin processing the 220001st record. Run 1, Event 359172, LumiSection 1891 at 25-Nov-2017 06:28:16.262 CET
+Begin processing the 221001st record. Run 1, Event 5029225, LumiSection 26470 at 25-Nov-2017 06:30:15.855 CET
+Begin processing the 222001st record. Run 1, Event 10056870, LumiSection 52931 at 25-Nov-2017 06:32:28.086 CET
+Begin processing the 223001st record. Run 1, Event 35034206, LumiSection 184391 at 25-Nov-2017 06:34:35.847 CET
+Begin processing the 224001st record. Run 1, Event 35077376, LumiSection 184618 at 25-Nov-2017 06:36:47.465 CET
+Begin processing the 225001st record. Run 1, Event 48849979, LumiSection 257105 at 25-Nov-2017 06:38:51.016 CET
+Begin processing the 226001st record. Run 1, Event 69190522, LumiSection 364161 at 25-Nov-2017 06:41:03.576 CET
+Begin processing the 227001st record. Run 1, Event 73510987, LumiSection 386900 at 25-Nov-2017 06:43:14.467 CET
+Begin processing the 228001st record. Run 1, Event 758664, LumiSection 3993 at 25-Nov-2017 06:45:58.066 CET
+Begin processing the 229001st record. Run 1, Event 6963145, LumiSection 36649 at 25-Nov-2017 06:48:00.535 CET
+Begin processing the 230001st record. Run 1, Event 20888444, LumiSection 109940 at 25-Nov-2017 06:50:10.051 CET
+Begin processing the 231001st record. Run 1, Event 72705856, LumiSection 382663 at 25-Nov-2017 06:52:20.950 CET
+Begin processing the 232001st record. Run 1, Event 47816843, LumiSection 251668 at 25-Nov-2017 06:54:13.913 CET
+Begin processing the 233001st record. Run 1, Event 57878284, LumiSection 304623 at 25-Nov-2017 06:56:23.468 CET
+Begin processing the 234001st record. Run 1, Event 72679904, LumiSection 382526 at 25-Nov-2017 06:58:32.268 CET
+Begin processing the 235001st record. Run 1, Event 8494345, LumiSection 44708 at 25-Nov-2017 07:00:54.684 CET
+Begin processing the 236001st record. Run 1, Event 13985982, LumiSection 73611 at 25-Nov-2017 07:02:57.762 CET
+Begin processing the 237001st record. Run 1, Event 27074988, LumiSection 142500 at 25-Nov-2017 07:05:11.522 CET
+Begin processing the 238001st record. Run 1, Event 32832241, LumiSection 172802 at 25-Nov-2017 07:07:15.727 CET
+Begin processing the 239001st record. Run 1, Event 46115383, LumiSection 242713 at 25-Nov-2017 07:09:14.941 CET
+Begin processing the 240001st record. Run 1, Event 54794061, LumiSection 288390 at 25-Nov-2017 07:11:30.025 CET
+Begin processing the 241001st record. Run 1, Event 63205981, LumiSection 332663 at 25-Nov-2017 07:13:43.884 CET
+Begin processing the 242001st record. Run 1, Event 68985702, LumiSection 363083 at 25-Nov-2017 07:16:00.764 CET
+Begin processing the 243001st record. Run 1, Event 5389524, LumiSection 28366 at 25-Nov-2017 07:18:15.064 CET
+Begin processing the 244001st record. Run 1, Event 13983844, LumiSection 73600 at 25-Nov-2017 07:20:34.874 CET
+Begin processing the 245001st record. Run 1, Event 36177953, LumiSection 190411 at 25-Nov-2017 07:22:49.178 CET
+Begin processing the 246001st record. Run 1, Event 43850366, LumiSection 230792 at 25-Nov-2017 07:25:01.003 CET
+Begin processing the 247001st record. Run 1, Event 51164464, LumiSection 269287 at 25-Nov-2017 07:27:04.554 CET
+Begin processing the 248001st record. Run 1, Event 48402501, LumiSection 254750 at 25-Nov-2017 07:29:16.110 CET
+Begin processing the 249001st record. Run 1, Event 61366033, LumiSection 322979 at 25-Nov-2017 07:31:29.353 CET
+Begin processing the 250001st record. Run 1, Event 78235620, LumiSection 411767 at 25-Nov-2017 07:33:30.414 CET
+Begin processing the 251001st record. Run 1, Event 79238668, LumiSection 417046 at 25-Nov-2017 07:35:42.523 CET
+Begin processing the 252001st record. Run 1, Event 14722453, LumiSection 77487 at 25-Nov-2017 07:38:11.027 CET
+Begin processing the 253001st record. Run 1, Event 19051702, LumiSection 100273 at 25-Nov-2017 07:40:25.412 CET
+Begin processing the 254001st record. Run 1, Event 24723467, LumiSection 130124 at 25-Nov-2017 07:42:24.106 CET
+Begin processing the 255001st record. Run 1, Event 28188926, LumiSection 148363 at 25-Nov-2017 07:44:28.551 CET
+Begin processing the 256001st record. Run 1, Event 37154080, LumiSection 195548 at 25-Nov-2017 07:46:41.138 CET
+Begin processing the 257001st record. Run 1, Event 54319258, LumiSection 285891 at 25-Nov-2017 07:48:35.651 CET
+Begin processing the 258001st record. Run 1, Event 70958900, LumiSection 373468 at 25-Nov-2017 07:50:51.469 CET
+Begin processing the 259001st record. Run 1, Event 75681709, LumiSection 398325 at 25-Nov-2017 07:53:04.811 CET
+Begin processing the 260001st record. Run 1, Event 7815504, LumiSection 41135 at 25-Nov-2017 07:55:27.908 CET
+Begin processing the 261001st record. Run 1, Event 17479543, LumiSection 91998 at 25-Nov-2017 07:57:23.174 CET
+Begin processing the 262001st record. Run 1, Event 54757059, LumiSection 288195 at 25-Nov-2017 07:59:37.880 CET
+Begin processing the 263001st record. Run 1, Event 54943139, LumiSection 289175 at 25-Nov-2017 08:01:51.182 CET
+Begin processing the 264001st record. Run 1, Event 59731403, LumiSection 314376 at 25-Nov-2017 08:03:50.361 CET
+Begin processing the 265001st record. Run 1, Event 67471527, LumiSection 355114 at 25-Nov-2017 08:06:04.160 CET
+Begin processing the 266001st record. Run 1, Event 71617562, LumiSection 376935 at 25-Nov-2017 08:08:11.987 CET
+Begin processing the 267001st record. Run 1, Event 10933288, LumiSection 57544 at 25-Nov-2017 08:10:37.014 CET
+Begin processing the 268001st record. Run 1, Event 48639313, LumiSection 255997 at 25-Nov-2017 08:12:39.383 CET
+Begin processing the 269001st record. Run 1, Event 50379158, LumiSection 265154 at 25-Nov-2017 08:14:55.230 CET
+Begin processing the 270001st record. Run 1, Event 50732424, LumiSection 267013 at 25-Nov-2017 08:17:07.714 CET
+Begin processing the 271001st record. Run 1, Event 57103004, LumiSection 300543 at 25-Nov-2017 08:19:22.442 CET
+Begin processing the 272001st record. Run 1, Event 60150484, LumiSection 316582 at 25-Nov-2017 08:21:17.301 CET
+Begin processing the 273001st record. Run 1, Event 66079141, LumiSection 347785 at 25-Nov-2017 08:23:29.677 CET
+25-Nov-2017 08:25:41 CET  Closed file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/92D0C872-53C1-E611-AA9B-141877637B68.root
+25-Nov-2017 08:25:41 CET  Initiating request to open file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/92EFB852-5FC1-E611-AEDB-FA163E84EDD1.root
+25-Nov-2017 08:25:41 CET  Successfully opened file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/92EFB852-5FC1-E611-AEDB-FA163E84EDD1.root
+Begin processing the 274001st record. Run 1, Event 147896, LumiSection 779 at 25-Nov-2017 08:26:02.364 CET
+Begin processing the 275001st record. Run 1, Event 2097561, LumiSection 11040 at 25-Nov-2017 08:28:24.501 CET
+Begin processing the 276001st record. Run 1, Event 3031826, LumiSection 15957 at 25-Nov-2017 08:30:26.684 CET
+Begin processing the 277001st record. Run 1, Event 6610542, LumiSection 34793 at 25-Nov-2017 08:32:41.158 CET
+Begin processing the 278001st record. Run 1, Event 6669681, LumiSection 35104 at 25-Nov-2017 08:34:47.663 CET
+Begin processing the 279001st record. Run 1, Event 7656785, LumiSection 40299 at 25-Nov-2017 08:36:47.451 CET
+Begin processing the 280001st record. Run 1, Event 10321562, LumiSection 54325 at 25-Nov-2017 08:39:00.033 CET
+Begin processing the 281001st record. Run 1, Event 10366228, LumiSection 54560 at 25-Nov-2017 08:41:11.054 CET
+Begin processing the 282001st record. Run 1, Event 13328143, LumiSection 70149 at 25-Nov-2017 08:43:13.742 CET
+Begin processing the 283001st record. Run 1, Event 14214924, LumiSection 74816 at 25-Nov-2017 08:45:21.660 CET
+Begin processing the 284001st record. Run 1, Event 15620798, LumiSection 82215 at 25-Nov-2017 08:47:34.321 CET
+Begin processing the 285001st record. Run 1, Event 19419942, LumiSection 102211 at 25-Nov-2017 08:49:45.640 CET
+Begin processing the 286001st record. Run 1, Event 19427047, LumiSection 102248 at 25-Nov-2017 08:51:42.274 CET
+Begin processing the 287001st record. Run 1, Event 8108641, LumiSection 42677 at 25-Nov-2017 08:54:08.419 CET
+Begin processing the 288001st record. Run 1, Event 8875727, LumiSection 46715 at 25-Nov-2017 08:56:16.053 CET
+Begin processing the 289001st record. Run 1, Event 9969645, LumiSection 52472 at 25-Nov-2017 08:58:18.587 CET
+Begin processing the 290001st record. Run 1, Event 11070346, LumiSection 58265 at 25-Nov-2017 09:00:31.134 CET
+Begin processing the 291001st record. Run 1, Event 23497342, LumiSection 123671 at 25-Nov-2017 09:02:38.747 CET
+Begin processing the 292001st record. Run 1, Event 23515830, LumiSection 123768 at 25-Nov-2017 09:04:47.523 CET
+Begin processing the 293001st record. Run 1, Event 25283839, LumiSection 133073 at 25-Nov-2017 09:06:46.857 CET
+Begin processing the 294001st record. Run 1, Event 29858520, LumiSection 157150 at 25-Nov-2017 09:08:57.084 CET
+Begin processing the 295001st record. Run 1, Event 31145847, LumiSection 163926 at 25-Nov-2017 09:11:03.460 CET
+Begin processing the 296001st record. Run 1, Event 31865840, LumiSection 167715 at 25-Nov-2017 09:12:54.152 CET
+Begin processing the 297001st record. Run 1, Event 34604788, LumiSection 182131 at 25-Nov-2017 09:15:02.271 CET
+Begin processing the 298001st record. Run 1, Event 35084585, LumiSection 184656 at 25-Nov-2017 09:17:12.085 CET
+Begin processing the 299001st record. Run 1, Event 13428996, LumiSection 70679 at 25-Nov-2017 09:19:22.730 CET
+Begin processing the 300001st record. Run 1, Event 13482446, LumiSection 70961 at 25-Nov-2017 09:21:38.212 CET
+Begin processing the 301001st record. Run 1, Event 15161913, LumiSection 79800 at 25-Nov-2017 09:23:46.876 CET
+Begin processing the 302001st record. Run 1, Event 21179846, LumiSection 111473 at 25-Nov-2017 09:25:57.869 CET
+Begin processing the 303001st record. Run 1, Event 23301245, LumiSection 122638 at 25-Nov-2017 09:27:57.933 CET
+Begin processing the 304001st record. Run 1, Event 26625743, LumiSection 140136 at 25-Nov-2017 09:30:13.152 CET
+Begin processing the 305001st record. Run 1, Event 42318505, LumiSection 222729 at 25-Nov-2017 09:32:21.175 CET
+Begin processing the 306001st record. Run 1, Event 42400098, LumiSection 223159 at 25-Nov-2017 09:34:20.059 CET
+Begin processing the 307001st record. Run 1, Event 50682802, LumiSection 266752 at 25-Nov-2017 09:36:34.756 CET
+Begin processing the 308001st record. Run 1, Event 52921622, LumiSection 278535 at 25-Nov-2017 09:38:48.288 CET
+Begin processing the 309001st record. Run 1, Event 54331665, LumiSection 285957 at 25-Nov-2017 09:41:05.065 CET
+Begin processing the 310001st record. Run 1, Event 60007185, LumiSection 315828 at 25-Nov-2017 09:43:12.674 CET
+Begin processing the 311001st record. Run 1, Event 5095517, LumiSection 26819 at 25-Nov-2017 09:45:42.777 CET
+Begin processing the 312001st record. Run 1, Event 5227619, LumiSection 27514 at 25-Nov-2017 09:48:00.106 CET
+Begin processing the 313001st record. Run 1, Event 32109482, LumiSection 168998 at 25-Nov-2017 09:50:15.352 CET
+Begin processing the 314001st record. Run 1, Event 8849577, LumiSection 46577 at 25-Nov-2017 09:52:13.100 CET
+Begin processing the 315001st record. Run 1, Event 9519368, LumiSection 50102 at 25-Nov-2017 09:54:27.871 CET
+Begin processing the 316001st record. Run 1, Event 10190683, LumiSection 53636 at 25-Nov-2017 09:56:41.969 CET
+Begin processing the 317001st record. Run 1, Event 12976301, LumiSection 68297 at 25-Nov-2017 09:59:03.164 CET
+Begin processing the 318001st record. Run 1, Event 13212141, LumiSection 69538 at 25-Nov-2017 10:01:04.937 CET
+Begin processing the 319001st record. Run 1, Event 13232525, LumiSection 69645 at 25-Nov-2017 10:03:12.912 CET
+Begin processing the 320001st record. Run 1, Event 15944842, LumiSection 83921 at 25-Nov-2017 10:05:28.044 CET
+Begin processing the 321001st record. Run 1, Event 18671181, LumiSection 98270 at 25-Nov-2017 10:07:36.917 CET
+Begin processing the 322001st record. Run 1, Event 19402124, LumiSection 102117 at 25-Nov-2017 10:09:49.446 CET
+Begin processing the 323001st record. Run 1, Event 57120357, LumiSection 300634 at 25-Nov-2017 10:12:08.863 CET
+Begin processing the 324001st record. Run 1, Event 59690466, LumiSection 314161 at 25-Nov-2017 10:14:18.995 CET
+Begin processing the 325001st record. Run 1, Event 60286883, LumiSection 317300 at 25-Nov-2017 10:16:17.669 CET
+Begin processing the 326001st record. Run 1, Event 60523463, LumiSection 318545 at 25-Nov-2017 10:18:31.937 CET
+Begin processing the 327001st record. Run 1, Event 60652543, LumiSection 319224 at 25-Nov-2017 10:20:45.077 CET
+Begin processing the 328001st record. Run 1, Event 61918202, LumiSection 325886 at 25-Nov-2017 10:22:41.664 CET
+Begin processing the 329001st record. Run 1, Event 64196519, LumiSection 337877 at 25-Nov-2017 10:24:52.788 CET
+Begin processing the 330001st record. Run 1, Event 67458726, LumiSection 355046 at 25-Nov-2017 10:27:02.609 CET
+Begin processing the 331001st record. Run 1, Event 72885385, LumiSection 383608 at 25-Nov-2017 10:29:13.972 CET
+Begin processing the 332001st record. Run 1, Event 75850385, LumiSection 399213 at 25-Nov-2017 10:31:20.002 CET
+Begin processing the 333001st record. Run 1, Event 76069463, LumiSection 400366 at 25-Nov-2017 10:33:27.413 CET
+Begin processing the 334001st record. Run 1, Event 78716401, LumiSection 414297 at 25-Nov-2017 10:35:38.280 CET
+25-Nov-2017 10:36:52 CET  Closed file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/92EFB852-5FC1-E611-AEDB-FA163E84EDD1.root
+25-Nov-2017 10:36:52 CET  Initiating request to open file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/94677600-66C1-E611-8D27-1866DAEEB364.root
+25-Nov-2017 10:36:57 CET  Successfully opened file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/94677600-66C1-E611-8D27-1866DAEEB364.root
+Begin processing the 335001st record. Run 1, Event 2406945, LumiSection 12669 at 25-Nov-2017 10:38:26.086 CET
+Begin processing the 336001st record. Run 1, Event 9405266, LumiSection 49502 at 25-Nov-2017 10:40:27.055 CET
+Begin processing the 337001st record. Run 1, Event 15994325, LumiSection 84181 at 25-Nov-2017 10:42:30.583 CET
+Begin processing the 338001st record. Run 1, Event 19191479, LumiSection 101008 at 25-Nov-2017 10:44:49.381 CET
+Begin processing the 339001st record. Run 1, Event 30540443, LumiSection 160739 at 25-Nov-2017 10:46:53.369 CET
+Begin processing the 340001st record. Run 1, Event 38751382, LumiSection 203955 at 25-Nov-2017 10:49:04.832 CET
+Begin processing the 341001st record. Run 1, Event 46472124, LumiSection 244591 at 25-Nov-2017 10:51:21.387 CET
+Begin processing the 342001st record. Run 1, Event 49656000, LumiSection 261348 at 25-Nov-2017 10:53:30.685 CET
+Begin processing the 343001st record. Run 1, Event 64849039, LumiSection 341311 at 25-Nov-2017 10:55:31.772 CET
+Begin processing the 344001st record. Run 1, Event 72176830, LumiSection 379879 at 25-Nov-2017 10:57:43.996 CET
+Begin processing the 345001st record. Run 1, Event 69968503, LumiSection 368256 at 25-Nov-2017 10:59:47.081 CET
+Begin processing the 346001st record. Run 1, Event 73202948, LumiSection 385279 at 25-Nov-2017 11:01:57.803 CET
+Begin processing the 347001st record. Run 1, Event 2866285, LumiSection 15086 at 25-Nov-2017 11:04:27.587 CET
+Begin processing the 348001st record. Run 1, Event 23878622, LumiSection 125677 at 25-Nov-2017 11:06:50.411 CET
+Begin processing the 349001st record. Run 1, Event 20015760, LumiSection 105346 at 25-Nov-2017 11:09:05.244 CET
+Begin processing the 350001st record. Run 1, Event 22998261, LumiSection 121044 at 25-Nov-2017 11:11:11.868 CET
+Begin processing the 351001st record. Run 1, Event 23991060, LumiSection 126269 at 25-Nov-2017 11:13:20.278 CET
+Begin processing the 352001st record. Run 1, Event 24856188, LumiSection 130822 at 25-Nov-2017 11:15:41.505 CET
+Begin processing the 353001st record. Run 1, Event 36126083, LumiSection 190138 at 25-Nov-2017 11:17:59.639 CET
+Begin processing the 354001st record. Run 1, Event 38732385, LumiSection 203855 at 25-Nov-2017 11:20:15.823 CET
+Begin processing the 355001st record. Run 1, Event 45600739, LumiSection 240004 at 25-Nov-2017 11:22:54.801 CET
+Begin processing the 356001st record. Run 1, Event 52349805, LumiSection 275526 at 25-Nov-2017 11:25:04.233 CET
+Begin processing the 357001st record. Run 1, Event 62870315, LumiSection 330897 at 25-Nov-2017 11:27:21.308 CET
+Begin processing the 358001st record. Run 1, Event 63357289, LumiSection 333460 at 25-Nov-2017 11:29:27.129 CET
+Begin processing the 359001st record. Run 1, Event 8852282, LumiSection 46591 at 25-Nov-2017 11:32:03.209 CET
+Begin processing the 360001st record. Run 1, Event 18870863, LumiSection 99321 at 25-Nov-2017 11:34:28.745 CET
+Begin processing the 361001st record. Run 1, Event 20006163, LumiSection 105296 at 25-Nov-2017 11:36:52.996 CET
+Begin processing the 362001st record. Run 1, Event 21424917, LumiSection 112763 at 25-Nov-2017 11:39:09.551 CET
+Begin processing the 363001st record. Run 1, Event 62038468, LumiSection 326519 at 25-Nov-2017 11:41:22.188 CET
+Begin processing the 364001st record. Run 1, Event 62599610, LumiSection 329472 at 25-Nov-2017 11:43:49.988 CET
+Begin processing the 365001st record. Run 1, Event 67148827, LumiSection 353415 at 25-Nov-2017 11:46:16.063 CET
+Begin processing the 366001st record. Run 1, Event 70983984, LumiSection 373600 at 25-Nov-2017 11:48:40.590 CET
+Begin processing the 367001st record. Run 1, Event 79861021, LumiSection 420322 at 25-Nov-2017 11:51:09.573 CET
+Begin processing the 368001st record. Run 1, Event 30081303, LumiSection 158323 at 25-Nov-2017 11:53:33.535 CET
+Begin processing the 369001st record. Run 1, Event 63305718, LumiSection 333188 at 25-Nov-2017 11:56:04.187 CET
+Begin processing the 370001st record. Run 1, Event 51900283, LumiSection 273160 at 25-Nov-2017 11:58:26.214 CET
+Begin processing the 371001st record. Run 1, Event 62865061, LumiSection 330869 at 25-Nov-2017 12:00:50.784 CET
+Begin processing the 372001st record. Run 1, Event 69769560, LumiSection 367209 at 25-Nov-2017 12:03:17.786 CET
+Begin processing the 373001st record. Run 1, Event 73437605, LumiSection 386514 at 25-Nov-2017 12:05:31.292 CET
+Begin processing the 374001st record. Run 1, Event 40255885, LumiSection 211874 at 25-Nov-2017 12:08:00.635 CET
+Begin processing the 375001st record. Run 1, Event 52131463, LumiSection 274377 at 25-Nov-2017 12:10:37.902 CET
+Begin processing the 376001st record. Run 1, Event 71607085, LumiSection 376880 at 25-Nov-2017 12:13:02.780 CET
+Begin processing the 377001st record. Run 1, Event 64764662, LumiSection 340867 at 25-Nov-2017 12:15:16.058 CET
+Begin processing the 378001st record. Run 1, Event 66762136, LumiSection 351380 at 25-Nov-2017 12:17:26.408 CET
+Begin processing the 379001st record. Run 1, Event 68777923, LumiSection 361989 at 25-Nov-2017 12:19:49.669 CET
+Begin processing the 380001st record. Run 1, Event 73623585, LumiSection 387493 at 25-Nov-2017 12:22:26.546 CET
+Begin processing the 381001st record. Run 1, Event 76467345, LumiSection 402460 at 25-Nov-2017 12:24:51.920 CET
+Begin processing the 382001st record. Run 1, Event 56089341, LumiSection 295208 at 25-Nov-2017 12:27:26.111 CET
+Begin processing the 383001st record. Run 1, Event 56229103, LumiSection 295943 at 25-Nov-2017 12:29:34.365 CET
+Begin processing the 384001st record. Run 1, Event 56494583, LumiSection 297340 at 25-Nov-2017 12:31:56.515 CET
+Begin processing the 385001st record. Run 1, Event 58521023, LumiSection 308006 at 25-Nov-2017 12:34:25.061 CET
+Begin processing the 386001st record. Run 1, Event 69793941, LumiSection 367337 at 25-Nov-2017 12:36:49.153 CET
+Begin processing the 387001st record. Run 1, Event 70298421, LumiSection 369992 at 25-Nov-2017 12:38:57.555 CET
+Begin processing the 388001st record. Run 1, Event 71701279, LumiSection 377375 at 25-Nov-2017 12:41:19.000 CET
+Begin processing the 389001st record. Run 1, Event 75875485, LumiSection 399345 at 25-Nov-2017 12:43:42.867 CET
+Begin processing the 390001st record. Run 1, Event 77037745, LumiSection 405462 at 25-Nov-2017 12:46:01.675 CET
+Begin processing the 391001st record. Run 1, Event 78943343, LumiSection 415492 at 25-Nov-2017 12:48:04.091 CET
+Begin processing the 392001st record. Run 1, Event 79095222, LumiSection 416291 at 25-Nov-2017 12:50:18.699 CET
+25-Nov-2017 12:50:53 CET  Closed file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/94677600-66C1-E611-8D27-1866DAEEB364.root
+25-Nov-2017 12:50:53 CET  Initiating request to open file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/96B4B15B-4EC1-E611-A7F5-02163E00C8BB.root
+25-Nov-2017 12:50:53 CET  Successfully opened file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/96B4B15B-4EC1-E611-A7F5-02163E00C8BB.root
+Begin processing the 393001st record. Run 1, Event 2275106, LumiSection 11975 at 25-Nov-2017 12:53:08.140 CET
+Begin processing the 394001st record. Run 1, Event 2607099, LumiSection 13722 at 25-Nov-2017 12:55:22.597 CET
+Begin processing the 395001st record. Run 1, Event 18993725, LumiSection 99967 at 25-Nov-2017 12:57:43.575 CET
+Begin processing the 396001st record. Run 1, Event 10394217, LumiSection 54707 at 25-Nov-2017 12:59:53.437 CET
+Begin processing the 397001st record. Run 1, Event 16875380, LumiSection 88818 at 25-Nov-2017 13:02:10.926 CET
+Begin processing the 398001st record. Run 1, Event 18650623, LumiSection 98162 at 25-Nov-2017 13:04:27.426 CET
+Begin processing the 399001st record. Run 1, Event 23048996, LumiSection 121311 at 25-Nov-2017 13:06:50.286 CET
+Begin processing the 400001st record. Run 1, Event 25010464, LumiSection 131635 at 25-Nov-2017 13:08:49.727 CET
+Begin processing the 401001st record. Run 1, Event 25000463, LumiSection 131582 at 25-Nov-2017 13:11:06.124 CET
+Begin processing the 402001st record. Run 1, Event 35286943, LumiSection 185721 at 25-Nov-2017 13:13:26.129 CET
+Begin processing the 403001st record. Run 1, Event 37103618, LumiSection 195283 at 25-Nov-2017 13:15:39.699 CET
+Begin processing the 404001st record. Run 1, Event 38272377, LumiSection 201434 at 25-Nov-2017 13:17:47.035 CET
+Begin processing the 405001st record. Run 1, Event 3550868, LumiSection 18689 at 25-Nov-2017 13:20:19.127 CET
+Begin processing the 406001st record. Run 1, Event 4083503, LumiSection 21493 at 25-Nov-2017 13:22:41.697 CET
+Begin processing the 407001st record. Run 1, Event 4988121, LumiSection 26254 at 25-Nov-2017 13:24:58.019 CET
+Begin processing the 408001st record. Run 1, Event 5200028, LumiSection 27369 at 25-Nov-2017 13:26:56.458 CET
+Begin processing the 409001st record. Run 1, Event 5680956, LumiSection 29900 at 25-Nov-2017 13:29:11.094 CET
+Begin processing the 410001st record. Run 1, Event 13467366, LumiSection 70881 at 25-Nov-2017 13:31:29.669 CET
+Begin processing the 411001st record. Run 1, Event 24319622, LumiSection 127999 at 25-Nov-2017 13:33:44.969 CET
+Begin processing the 412001st record. Run 1, Event 27028464, LumiSection 142256 at 25-Nov-2017 13:35:49.599 CET
+Begin processing the 413001st record. Run 1, Event 35247721, LumiSection 185515 at 25-Nov-2017 13:38:07.741 CET
+Begin processing the 414001st record. Run 1, Event 44355783, LumiSection 233452 at 25-Nov-2017 13:40:26.096 CET
+Begin processing the 415001st record. Run 1, Event 48235398, LumiSection 253871 at 25-Nov-2017 13:42:31.963 CET
+Begin processing the 416001st record. Run 1, Event 61930823, LumiSection 325952 at 25-Nov-2017 13:44:53.964 CET
+Begin processing the 417001st record. Run 1, Event 5203146, LumiSection 27385 at 25-Nov-2017 13:47:25.243 CET
+Begin processing the 418001st record. Run 1, Event 5005387, LumiSection 26344 at 25-Nov-2017 13:49:45.587 CET
+Begin processing the 419001st record. Run 1, Event 10023918, LumiSection 52758 at 25-Nov-2017 13:52:07.913 CET
+Begin processing the 420001st record. Run 1, Event 13376924, LumiSection 70405 at 25-Nov-2017 13:54:08.945 CET
+Begin processing the 421001st record. Run 1, Event 21355638, LumiSection 112399 at 25-Nov-2017 13:56:26.171 CET
+Begin processing the 422001st record. Run 1, Event 21776894, LumiSection 114616 at 25-Nov-2017 13:58:47.983 CET
+Begin processing the 423001st record. Run 1, Event 21817058, LumiSection 114827 at 25-Nov-2017 14:01:06.534 CET
+Begin processing the 424001st record. Run 1, Event 23918341, LumiSection 125887 at 25-Nov-2017 14:03:16.318 CET
+Begin processing the 425001st record. Run 1, Event 27025845, LumiSection 142242 at 25-Nov-2017 14:05:34.724 CET
+Begin processing the 426001st record. Run 1, Event 37033355, LumiSection 194913 at 25-Nov-2017 14:07:47.594 CET
+Begin processing the 427001st record. Run 1, Event 51231925, LumiSection 269642 at 25-Nov-2017 14:10:11.255 CET
+Begin processing the 428001st record. Run 1, Event 56006446, LumiSection 294771 at 25-Nov-2017 14:12:19.170 CET
+Begin processing the 429001st record. Run 1, Event 1718755, LumiSection 9046 at 25-Nov-2017 14:14:54.659 CET
+Begin processing the 430001st record. Run 1, Event 8986921, LumiSection 47300 at 25-Nov-2017 14:17:08.142 CET
+Begin processing the 431001st record. Run 1, Event 10530282, LumiSection 55423 at 25-Nov-2017 14:19:23.063 CET
+Begin processing the 432001st record. Run 1, Event 33520120, LumiSection 176422 at 25-Nov-2017 14:21:30.170 CET
+Begin processing the 433001st record. Run 1, Event 36310700, LumiSection 191109 at 25-Nov-2017 14:23:45.725 CET
+Begin processing the 434001st record. Run 1, Event 53762416, LumiSection 282961 at 25-Nov-2017 14:26:06.084 CET
+Begin processing the 435001st record. Run 1, Event 55999305, LumiSection 294734 at 25-Nov-2017 14:28:21.681 CET
+Begin processing the 436001st record. Run 1, Event 76842917, LumiSection 404437 at 25-Nov-2017 14:30:21.769 CET
+Begin processing the 437001st record. Run 1, Event 76591571, LumiSection 403114 at 25-Nov-2017 14:32:36.830 CET
+Begin processing the 438001st record. Run 1, Event 10157203, LumiSection 53459 at 25-Nov-2017 14:35:11.153 CET
+Begin processing the 439001st record. Run 1, Event 11618541, LumiSection 61151 at 25-Nov-2017 14:37:30.256 CET
+Begin processing the 440001st record. Run 1, Event 27988060, LumiSection 147306 at 25-Nov-2017 14:39:38.900 CET
+Begin processing the 441001st record. Run 1, Event 31815305, LumiSection 167449 at 25-Nov-2017 14:41:48.247 CET
+Begin processing the 442001st record. Run 1, Event 37911885, LumiSection 199537 at 25-Nov-2017 14:44:07.634 CET
+Begin processing the 443001st record. Run 1, Event 42319722, LumiSection 222736 at 25-Nov-2017 14:46:42.747 CET
+Begin processing the 444001st record. Run 1, Event 47226141, LumiSection 248559 at 25-Nov-2017 14:48:53.627 CET
+Begin processing the 445001st record. Run 1, Event 69721278, LumiSection 366955 at 25-Nov-2017 14:51:14.616 CET
+Begin processing the 446001st record. Run 1, Event 69778885, LumiSection 367258 at 25-Nov-2017 14:53:35.855 CET
+25-Nov-2017 14:55:40 CET  Closed file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/96B4B15B-4EC1-E611-A7F5-02163E00C8BB.root
+25-Nov-2017 14:55:40 CET  Initiating request to open file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/96F83009-51C1-E611-B788-00259073E3AE.root
+25-Nov-2017 14:55:42 CET  Successfully opened file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/96F83009-51C1-E611-B788-00259073E3AE.root
+Begin processing the 447001st record. Run 1, Event 51386, LumiSection 271 at 25-Nov-2017 14:56:15.643 CET
+Begin processing the 448001st record. Run 1, Event 349117, LumiSection 1838 at 25-Nov-2017 14:58:57.802 CET
+Begin processing the 449001st record. Run 1, Event 2542683, LumiSection 13383 at 25-Nov-2017 15:01:06.471 CET
+Begin processing the 450001st record. Run 1, Event 7230223, LumiSection 38054 at 25-Nov-2017 15:03:27.725 CET
+Begin processing the 451001st record. Run 1, Event 7757164, LumiSection 40828 at 25-Nov-2017 15:05:48.867 CET
+Begin processing the 452001st record. Run 1, Event 16897207, LumiSection 88933 at 25-Nov-2017 15:08:11.422 CET
+Begin processing the 453001st record. Run 1, Event 26180820, LumiSection 137794 at 25-Nov-2017 15:10:18.257 CET
+Begin processing the 454001st record. Run 1, Event 40608126, LumiSection 213727 at 25-Nov-2017 15:12:42.470 CET
+Begin processing the 455001st record. Run 1, Event 48768106, LumiSection 256675 at 25-Nov-2017 15:14:59.546 CET
+Begin processing the 456001st record. Run 1, Event 47927782, LumiSection 252252 at 25-Nov-2017 15:17:27.584 CET
+Begin processing the 457001st record. Run 1, Event 60992384, LumiSection 321013 at 25-Nov-2017 15:19:47.465 CET
+Begin processing the 458001st record. Run 1, Event 62926022, LumiSection 331190 at 25-Nov-2017 15:21:56.712 CET
+Begin processing the 459001st record. Run 1, Event 66816701, LumiSection 351667 at 25-Nov-2017 15:24:13.022 CET
+Begin processing the 460001st record. Run 1, Event 338601, LumiSection 1783 at 25-Nov-2017 15:26:44.908 CET
+Begin processing the 461001st record. Run 1, Event 1770647, LumiSection 9320 at 25-Nov-2017 15:29:00.167 CET
+Begin processing the 462001st record. Run 1, Event 5028625, LumiSection 26467 at 25-Nov-2017 15:31:10.168 CET
+Begin processing the 463001st record. Run 1, Event 9080773, LumiSection 47794 at 25-Nov-2017 15:33:30.911 CET
+Begin processing the 464001st record. Run 1, Event 14013018, LumiSection 73753 at 25-Nov-2017 15:35:50.698 CET
+Begin processing the 465001st record. Run 1, Event 26151604, LumiSection 137641 at 25-Nov-2017 15:38:10.445 CET
+Begin processing the 466001st record. Run 1, Event 40314087, LumiSection 212180 at 25-Nov-2017 15:40:15.404 CET
+Begin processing the 467001st record. Run 1, Event 45762805, LumiSection 240857 at 25-Nov-2017 15:42:36.380 CET
+Begin processing the 468001st record. Run 1, Event 60888585, LumiSection 320467 at 25-Nov-2017 15:44:55.161 CET
+Begin processing the 469001st record. Run 1, Event 60995606, LumiSection 321030 at 25-Nov-2017 15:47:15.690 CET
+Begin processing the 470001st record. Run 1, Event 504041, LumiSection 2653 at 25-Nov-2017 15:49:27.506 CET
+Begin processing the 471001st record. Run 1, Event 19799544, LumiSection 104209 at 25-Nov-2017 15:51:59.095 CET
+Begin processing the 472001st record. Run 1, Event 18042260, LumiSection 94960 at 25-Nov-2017 15:54:17.724 CET
+Begin processing the 473001st record. Run 1, Event 27255203, LumiSection 143449 at 25-Nov-2017 15:56:30.954 CET
+Begin processing the 474001st record. Run 1, Event 28422767, LumiSection 149594 at 25-Nov-2017 15:58:40.773 CET
+Begin processing the 475001st record. Run 1, Event 32272745, LumiSection 169857 at 25-Nov-2017 16:01:12.866 CET
+Begin processing the 476001st record. Run 1, Event 34719043, LumiSection 182732 at 25-Nov-2017 16:03:36.366 CET
+Begin processing the 477001st record. Run 1, Event 36308400, LumiSection 191097 at 25-Nov-2017 16:05:50.270 CET
+Begin processing the 478001st record. Run 1, Event 40214302, LumiSection 211655 at 25-Nov-2017 16:08:13.771 CET
+Begin processing the 479001st record. Run 1, Event 50789943, LumiSection 267316 at 25-Nov-2017 16:10:23.247 CET
+Begin processing the 480001st record. Run 1, Event 61321863, LumiSection 322747 at 25-Nov-2017 16:12:46.323 CET
+Begin processing the 481001st record. Run 1, Event 65143003, LumiSection 342858 at 25-Nov-2017 16:15:10.090 CET
+Begin processing the 482001st record. Run 1, Event 65152725, LumiSection 342909 at 25-Nov-2017 16:17:25.179 CET
+Begin processing the 483001st record. Run 1, Event 6708199, LumiSection 35307 at 25-Nov-2017 16:19:49.451 CET
+Begin processing the 484001st record. Run 1, Event 7921416, LumiSection 41692 at 25-Nov-2017 16:22:13.125 CET
+Begin processing the 485001st record. Run 1, Event 7955484, LumiSection 41871 at 25-Nov-2017 16:24:27.061 CET
+Begin processing the 486001st record. Run 1, Event 8155242, LumiSection 42923 at 25-Nov-2017 16:26:48.334 CET
+Begin processing the 487001st record. Run 1, Event 13073458, LumiSection 68808 at 25-Nov-2017 16:28:55.658 CET
+Begin processing the 488001st record. Run 1, Event 13079023, LumiSection 68837 at 25-Nov-2017 16:31:37.651 CET
+Begin processing the 489001st record. Run 1, Event 23621255, LumiSection 124323 at 25-Nov-2017 16:34:12.755 CET
+Begin processing the 490001st record. Run 1, Event 45782723, LumiSection 240962 at 25-Nov-2017 16:36:47.562 CET
+Begin processing the 491001st record. Run 1, Event 52092482, LumiSection 274171 at 25-Nov-2017 16:39:14.907 CET
+Begin processing the 492001st record. Run 1, Event 58325511, LumiSection 306977 at 25-Nov-2017 16:41:42.933 CET
+Begin processing the 493001st record. Run 1, Event 70759762, LumiSection 372420 at 25-Nov-2017 16:44:23.062 CET
+Begin processing the 494001st record. Run 1, Event 42302942, LumiSection 222647 at 25-Nov-2017 16:46:45.383 CET
+Begin processing the 495001st record. Run 1, Event 44141281, LumiSection 232323 at 25-Nov-2017 16:49:26.353 CET
+Begin processing the 496001st record. Run 1, Event 44657567, LumiSection 235040 at 25-Nov-2017 16:51:57.811 CET
+Begin processing the 497001st record. Run 1, Event 44690482, LumiSection 235214 at 25-Nov-2017 16:54:30.674 CET
+Begin processing the 498001st record. Run 1, Event 48866166, LumiSection 257191 at 25-Nov-2017 16:56:47.601 CET
+Begin processing the 499001st record. Run 1, Event 52109665, LumiSection 274262 at 25-Nov-2017 16:59:01.191 CET
+Begin processing the 500001st record. Run 1, Event 54978507, LumiSection 289361 at 25-Nov-2017 17:01:25.479 CET
+Begin processing the 501001st record. Run 1, Event 55407004, LumiSection 291616 at 25-Nov-2017 17:03:57.774 CET
+Begin processing the 502001st record. Run 1, Event 63718118, LumiSection 335359 at 25-Nov-2017 17:06:15.902 CET
+Begin processing the 503001st record. Run 1, Event 65966823, LumiSection 347194 at 25-Nov-2017 17:08:21.150 CET
+Begin processing the 504001st record. Run 1, Event 66951290, LumiSection 352376 at 25-Nov-2017 17:10:42.388 CET
+Begin processing the 505001st record. Run 1, Event 74355120, LumiSection 391343 at 25-Nov-2017 17:13:04.937 CET
+25-Nov-2017 17:14:46 CET  Closed file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/96F83009-51C1-E611-B788-00259073E3AE.root
+25-Nov-2017 17:14:46 CET  Initiating request to open file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/98177787-7AC1-E611-8239-1866DAEA7EA8.root
+25-Nov-2017 17:14:46 CET  Successfully opened file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/98177787-7AC1-E611-8239-1866DAEA7EA8.root
+Begin processing the 506001st record. Run 1, Event 26583, LumiSection 140 at 25-Nov-2017 17:16:10.725 CET
+Begin processing the 507001st record. Run 1, Event 2470941, LumiSection 13005 at 25-Nov-2017 17:18:24.304 CET
+Begin processing the 508001st record. Run 1, Event 14087805, LumiSection 74147 at 25-Nov-2017 17:20:56.739 CET
+Begin processing the 509001st record. Run 1, Event 16541340, LumiSection 87060 at 25-Nov-2017 17:23:17.179 CET
+Begin processing the 510001st record. Run 1, Event 21536681, LumiSection 113351 at 25-Nov-2017 17:25:39.095 CET
+Begin processing the 511001st record. Run 1, Event 22950206, LumiSection 120791 at 25-Nov-2017 17:28:00.107 CET
+Begin processing the 512001st record. Run 1, Event 32475157, LumiSection 170922 at 25-Nov-2017 17:30:26.233 CET
+Begin processing the 513001st record. Run 1, Event 39815887, LumiSection 209558 at 25-Nov-2017 17:32:49.184 CET
+Begin processing the 514001st record. Run 1, Event 48354275, LumiSection 254497 at 25-Nov-2017 17:35:02.194 CET
+Begin processing the 515001st record. Run 1, Event 54081842, LumiSection 284642 at 25-Nov-2017 17:37:25.598 CET
+Begin processing the 516001st record. Run 1, Event 57499026, LumiSection 302627 at 25-Nov-2017 17:39:47.958 CET
+Begin processing the 517001st record. Run 1, Event 63768883, LumiSection 335626 at 25-Nov-2017 17:42:16.446 CET
+Begin processing the 518001st record. Run 1, Event 1628086, LumiSection 8569 at 25-Nov-2017 17:44:28.246 CET
+Begin processing the 519001st record. Run 1, Event 3295756, LumiSection 17347 at 25-Nov-2017 17:47:22.494 CET
+Begin processing the 520001st record. Run 1, Event 9303028, LumiSection 48964 at 25-Nov-2017 17:49:56.492 CET
+Begin processing the 521001st record. Run 1, Event 18512942, LumiSection 97437 at 25-Nov-2017 17:52:12.671 CET
+Begin processing the 522001st record. Run 1, Event 22334467, LumiSection 117550 at 25-Nov-2017 17:54:47.064 CET
+Begin processing the 523001st record. Run 1, Event 24006724, LumiSection 126352 at 25-Nov-2017 17:57:22.746 CET
+Begin processing the 524001st record. Run 1, Event 42149687, LumiSection 221841 at 25-Nov-2017 17:59:31.952 CET
+Begin processing the 525001st record. Run 1, Event 42698672, LumiSection 224730 at 25-Nov-2017 18:01:59.209 CET
+Begin processing the 526001st record. Run 1, Event 46424052, LumiSection 244337 at 25-Nov-2017 18:04:13.551 CET
+Begin processing the 527001st record. Run 1, Event 50291597, LumiSection 264693 at 25-Nov-2017 18:06:35.604 CET
+Begin processing the 528001st record. Run 1, Event 54624263, LumiSection 287497 at 25-Nov-2017 18:08:44.775 CET
+Begin processing the 529001st record. Run 1, Event 53559361, LumiSection 281892 at 25-Nov-2017 18:11:17.845 CET
+Begin processing the 530001st record. Run 1, Event 5006680, LumiSection 26351 at 25-Nov-2017 18:13:49.070 CET
+Begin processing the 531001st record. Run 1, Event 12231121, LumiSection 64375 at 25-Nov-2017 18:16:17.547 CET
+Begin processing the 532001st record. Run 1, Event 18174204, LumiSection 95654 at 25-Nov-2017 18:18:40.331 CET
+Begin processing the 533001st record. Run 1, Event 23126966, LumiSection 121721 at 25-Nov-2017 18:20:41.028 CET
+Begin processing the 534001st record. Run 1, Event 29422307, LumiSection 154855 at 25-Nov-2017 18:23:04.289 CET
+Begin processing the 535001st record. Run 1, Event 37181005, LumiSection 195690 at 25-Nov-2017 18:25:31.105 CET
+Begin processing the 536001st record. Run 1, Event 47503904, LumiSection 250021 at 25-Nov-2017 18:27:52.327 CET
+Begin processing the 537001st record. Run 1, Event 49458063, LumiSection 260306 at 25-Nov-2017 18:30:32.192 CET
+Begin processing the 538001st record. Run 1, Event 54038784, LumiSection 284415 at 25-Nov-2017 18:32:49.985 CET
+Begin processing the 539001st record. Run 1, Event 54710441, LumiSection 287950 at 25-Nov-2017 18:35:07.109 CET
+Begin processing the 540001st record. Run 1, Event 56108676, LumiSection 295309 at 25-Nov-2017 18:37:27.391 CET
+Begin processing the 541001st record. Run 1, Event 60152457, LumiSection 316592 at 25-Nov-2017 18:39:52.225 CET
+Begin processing the 542001st record. Run 1, Event 61673420, LumiSection 324597 at 25-Nov-2017 18:41:58.703 CET
+Begin processing the 543001st record. Run 1, Event 29296140, LumiSection 154191 at 25-Nov-2017 18:44:33.130 CET
+Begin processing the 544001st record. Run 1, Event 29455263, LumiSection 155028 at 25-Nov-2017 18:46:52.296 CET
+Begin processing the 545001st record. Run 1, Event 32378085, LumiSection 170411 at 25-Nov-2017 18:49:08.385 CET
+Begin processing the 546001st record. Run 1, Event 42357563, LumiSection 222935 at 25-Nov-2017 18:51:07.978 CET
+Begin processing the 547001st record. Run 1, Event 48848983, LumiSection 257100 at 25-Nov-2017 18:53:25.798 CET
+Begin processing the 548001st record. Run 1, Event 49087842, LumiSection 258357 at 25-Nov-2017 18:55:35.931 CET
+Begin processing the 549001st record. Run 1, Event 22267308, LumiSection 117197 at 25-Nov-2017 18:57:45.526 CET
+Begin processing the 550001st record. Run 1, Event 23317525, LumiSection 122724 at 25-Nov-2017 18:59:47.233 CET
+Begin processing the 551001st record. Run 1, Event 37241342, LumiSection 196007 at 25-Nov-2017 19:02:03.421 CET
+Begin processing the 552001st record. Run 1, Event 53200067, LumiSection 280001 at 25-Nov-2017 19:04:10.530 CET
+Begin processing the 553001st record. Run 1, Event 57471896, LumiSection 302484 at 25-Nov-2017 19:06:11.261 CET
+Begin processing the 554001st record. Run 1, Event 67421684, LumiSection 354851 at 25-Nov-2017 19:08:24.637 CET
+Begin processing the 555001st record. Run 1, Event 79440162, LumiSection 418107 at 25-Nov-2017 19:10:41.788 CET
+Begin processing the 556001st record. Run 1, Event 31938161, LumiSection 168096 at 25-Nov-2017 19:13:04.460 CET
+Begin processing the 557001st record. Run 1, Event 38106964, LumiSection 200563 at 25-Nov-2017 19:15:34.401 CET
+Begin processing the 558001st record. Run 1, Event 49870143, LumiSection 262475 at 25-Nov-2017 19:17:39.865 CET
+Begin processing the 559001st record. Run 1, Event 61065941, LumiSection 321400 at 25-Nov-2017 19:19:50.538 CET
+Begin processing the 560001st record. Run 1, Event 69882963, LumiSection 367805 at 25-Nov-2017 19:21:57.185 CET
+Begin processing the 561001st record. Run 1, Event 70003311, LumiSection 368439 at 25-Nov-2017 19:24:13.911 CET
+Begin processing the 562001st record. Run 1, Event 70931147, LumiSection 373322 at 25-Nov-2017 19:26:25.760 CET
+25-Nov-2017 19:27:22 CET  Closed file /gpfs/gaes/cms/store/mc/RunIISummer16MiniAODv2/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/98177787-7AC1-E611-8239-1866DAEA7EA8.root
+TimeReport> Time report complete in 70417.8 seconds
+ Time Summary: 
+ - Min event:   0.00136805
+ - Max event:   22.3028
+ - Avg event:   0.112517
+ - Total loop:  70417.4
+ - Total job:   70417.8
+ Event Throughput: 7.98751 ev/s
+ CPU Summary: 
+ - Total loop:  64766.3
+ - Total job:   64766.7
+
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 TimeReport           -e AfterModEndJob                         1        1
+    2 fileAction           -s file_close                            10       10
+    3 fileAction           -s file_open                             20       20
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 TimeReport           PostEndRun                        
+    2 fileAction           PostProcessEvent PostProcessEvent PostEndRun
+    3 fileAction           pre-events       pre-events       PostProcessEvent
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Error                   1                   1
+System                 30                  30
+Complete
+process id is 7639 status is 0
