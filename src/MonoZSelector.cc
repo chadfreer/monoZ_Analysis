@@ -289,6 +289,13 @@ void MonoZSelector::SetupNewDirectory()
   preSelection->Branch("DeltaPhiClosestJetMet", &eventList.DeltaPhiClosestJetMet, 102400000);
   preSelection->Branch("DeltaPhiFarthestJetMet", &eventList.DeltaPhiFarthestJetMet, 102400000);
   preSelection->Branch("EtaThirdJet", &eventList.EtaThirdJet, 102400000);
+
+  preSelection->Branch("SecondZmass", &eventList.SecondZmass, 102400000);
+  preSelection->Branch("SecondZpt", &eventList.SecondZpt, 102400000);
+  preSelection->Branch("SecondZEta", &eventList.SecondZEta, 102400000);
+  preSelection->Branch("SecondZPhi", &eventList.SecondZPhi, 102400000);
+  preSelection->Branch("ThirdLeptonPt", &eventList.ThirdLeptonPt, 102400000);
+  preSelection->Branch("FourthLeptonPt", &eventList.FourthLeptonPt, 102400000);
   //preSelection->Branch("event_weight", &eventList.event_weight, 102400000);
   };
 
@@ -614,6 +621,8 @@ void MonoZSelector::ProcessSystematic(EventTupleUtil::Systematic systematic)
   Lepton trailingLep{Zcand, 0};
   Vector2D emulatedMet;
   LorentzVector emulatedMETp4;
+            Lepton Z2LeadingLep{LorentzVector(), 0};
+            Lepton Z2TrailingLep{LorentzVector(), 0};
   if ( goodLeptons.size() < 2 ) {
     // Future fake rate region?
     return;
@@ -689,8 +698,8 @@ void MonoZSelector::ProcessSystematic(EventTupleUtil::Systematic systematic)
           LorentzVector candTemp = goodLeptons[i].p4 + goodLeptons[j].p4;
           if ( fabs(candTemp.M()-nominalZmass) < fabs(Zcand.M()-nominalZmass) ) {
             // Find extra leptons for fake met
-            Lepton Z2LeadingLep{LorentzVector(), 0};
-            Lepton Z2TrailingLep{LorentzVector(), 0};
+            //Lepton Z2LeadingLep{LorentzVector(), 0};
+            //Lepton Z2TrailingLep{LorentzVector(), 0};
             for(size_t k=0; k<goodLeptons.size(); ++k) {
               if ( k != i && k != j ) {
                 if ( goodLeptons[k].p4.Pt() > Z2LeadingLep.p4.Pt() ) {
@@ -1107,6 +1116,14 @@ void MonoZSelector::ProcessSystematic(EventTupleUtil::Systematic systematic)
     eventList.DeltaPhiClosestJetMet = deltaphiclosestjetmet;
     eventList.DeltaPhiFarthestJetMet = deltaphifarthestjetmet;
     eventList.EtaThirdJet = etathirdjet;
+ 
+    eventList.SecondZmass = (Z2LeadingLep.p4+Z2TrailingLep.p4).M();
+    eventList.SecondZpt = (Z2LeadingLep.p4+Z2TrailingLep.p4).Pt();
+    eventList.SecondZEta = (Z2LeadingLep.p4+Z2TrailingLep.p4).Eta();
+    eventList.SecondZPhi = (Z2LeadingLep.p4+Z2TrailingLep.p4).Phi();
+    eventList.ThirdLeptonPt = Z2LeadingLep.p4.Pt();
+    eventList.FourthLeptonPt = Z2TrailingLep.p4.Pt();
+
     preSelection->Fill(); 
 
   }

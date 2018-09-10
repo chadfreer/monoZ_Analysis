@@ -231,6 +231,12 @@ public :
     float DeltaPhiClosestJetMet;
     float DeltaPhiFarthestJetMet;
     float EtaThirdJet; 
+    float SecondZmass;
+    float SecondZpt;
+    float ThirdLeptonPt;
+    float FourthLeptonPt;
+    float SecondZEta;
+    float SecondZPhi;
    //float event_weight;
   };
   EventList eventList;
