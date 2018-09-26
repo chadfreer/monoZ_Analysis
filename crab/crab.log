@@ -1,0 +1,1986 @@
+DEBUG 2018-09-23 17:20:13,178: 	 Executing command: 'status'
+DEBUG 2018-09-23 17:20:13,179: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+ERROR 2018-09-23 17:20:13,179: 	 Error: /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleEG_Run2016H-03Feb2017_ver2-v1 is not a valid CRAB project directory.
+ERROR 2018-09-23 17:20:13,179: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 262, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 1021, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 575, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleEG_Run2016H-03Feb2017_ver2-v1 is not a valid CRAB project directory.
+DEBUG 2018-09-23 17:29:58,450: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:29:58,450: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:29:58,461: 	 Checking credentials
+DEBUG 2018-09-23 17:29:58,461: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:29:58,461: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:29:59,269: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604557
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:00,075: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604556
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:00,075: 	 Proxy valid for 167:55:57 hours
+INFO 2018-09-23 17:30:00,075: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:00,076: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:00,123: 	 Overriden parameter Data.inputDataset with '/DoubleEG/Run2016H-03Feb2017_ver3-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:00,124: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:00,130: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:00,130: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleEG_Run2016H-03Feb2017_ver3-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleEG_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 17:30:00,132: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleEG_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 17:30:00,133: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:00,133: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:00,133: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:00,838: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:00,838: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:00,847: 	 Checking credentials
+DEBUG 2018-09-23 17:30:00,848: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:00,848: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:01,654: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604555
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:02,764: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604554
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:02,764: 	 Proxy valid for 167:55:55 hours
+INFO 2018-09-23 17:30:02,764: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:02,765: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:02,837: 	 Overriden parameter Data.inputDataset with '/DoubleMuon/Run2016B-03Feb2017_ver2-v2/MINIAOD'
+DEBUG 2018-09-23 17:30:02,837: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:02,842: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:02,842: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016B-03Feb2017_ver2-v2'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016B-03Feb2017_ver2-v2'
+ERROR 2018-09-23 17:30:02,849: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016B-03Feb2017_ver2-v2'
+ERROR 2018-09-23 17:30:02,849: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:02,849: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:02,849: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:03,593: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:03,593: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:03,604: 	 Checking credentials
+DEBUG 2018-09-23 17:30:03,605: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:03,605: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:04,417: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604552
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:05,224: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604551
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:05,224: 	 Proxy valid for 167:55:52 hours
+INFO 2018-09-23 17:30:05,224: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:05,224: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:05,270: 	 Overriden parameter Data.inputDataset with '/DoubleMuon/Run2016C-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:05,271: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:05,273: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:05,273: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016C-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016C-03Feb2017-v1'
+ERROR 2018-09-23 17:30:05,275: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016C-03Feb2017-v1'
+ERROR 2018-09-23 17:30:05,275: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:05,275: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:05,275: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:05,991: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:05,991: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:06,000: 	 Checking credentials
+DEBUG 2018-09-23 17:30:06,000: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:06,000: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:06,805: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604550
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:07,612: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604549
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:07,612: 	 Proxy valid for 167:55:50 hours
+INFO 2018-09-23 17:30:07,612: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:07,613: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:07,662: 	 Overriden parameter Data.inputDataset with '/DoubleMuon/Run2016D-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:07,662: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:07,664: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:07,664: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016D-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016D-03Feb2017-v1'
+ERROR 2018-09-23 17:30:07,666: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016D-03Feb2017-v1'
+ERROR 2018-09-23 17:30:07,667: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:07,667: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:07,667: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:08,366: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:08,366: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:08,375: 	 Checking credentials
+DEBUG 2018-09-23 17:30:08,375: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:08,375: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:09,180: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604547
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:09,988: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604547
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:09,989: 	 Proxy valid for 167:55:47 hours
+INFO 2018-09-23 17:30:09,989: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:09,989: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:10,044: 	 Overriden parameter Data.inputDataset with '/DoubleMuon/Run2016E-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:10,045: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:10,047: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:10,047: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016E-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016E-03Feb2017-v1'
+ERROR 2018-09-23 17:30:10,049: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016E-03Feb2017-v1'
+ERROR 2018-09-23 17:30:10,049: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:10,049: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:10,049: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:10,736: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:10,736: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:10,744: 	 Checking credentials
+DEBUG 2018-09-23 17:30:10,745: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:10,745: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:11,550: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604545
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:12,362: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604544
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:12,362: 	 Proxy valid for 167:55:45 hours
+INFO 2018-09-23 17:30:12,363: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:12,363: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:12,416: 	 Overriden parameter Data.inputDataset with '/DoubleMuon/Run2016F-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:12,417: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:12,419: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:12,419: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016F-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016F-03Feb2017-v1'
+ERROR 2018-09-23 17:30:12,424: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016F-03Feb2017-v1'
+ERROR 2018-09-23 17:30:12,424: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:12,424: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:12,424: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:13,136: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:13,136: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:13,148: 	 Checking credentials
+DEBUG 2018-09-23 17:30:13,148: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:13,148: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:13,953: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604543
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:14,760: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604542
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:14,760: 	 Proxy valid for 167:55:43 hours
+INFO 2018-09-23 17:30:14,760: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:14,761: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:14,806: 	 Overriden parameter Data.inputDataset with '/DoubleMuon/Run2016G-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:14,807: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:14,808: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:14,808: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016G-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016G-03Feb2017-v1'
+ERROR 2018-09-23 17:30:14,811: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016G-03Feb2017-v1'
+ERROR 2018-09-23 17:30:14,811: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:14,811: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:14,812: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:15,505: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:15,505: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:15,513: 	 Checking credentials
+DEBUG 2018-09-23 17:30:15,513: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:15,513: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:16,320: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604540
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:17,128: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604539
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:17,128: 	 Proxy valid for 167:55:40 hours
+INFO 2018-09-23 17:30:17,128: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:17,129: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:17,205: 	 Overriden parameter Data.inputDataset with '/DoubleMuon/Run2016H-03Feb2017_ver2-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:17,206: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:17,214: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:17,214: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016H-03Feb2017_ver2-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016H-03Feb2017_ver2-v1'
+ERROR 2018-09-23 17:30:17,219: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016H-03Feb2017_ver2-v1'
+ERROR 2018-09-23 17:30:17,219: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:17,219: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:17,219: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:20,092: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:20,092: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:20,103: 	 Checking credentials
+DEBUG 2018-09-23 17:30:20,105: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:20,105: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:20,910: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604536
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:21,721: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604535
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:21,721: 	 Proxy valid for 167:55:36 hours
+INFO 2018-09-23 17:30:21,722: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:21,722: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:21,788: 	 Overriden parameter Data.inputDataset with '/DoubleMuon/Run2016H-03Feb2017_ver3-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:21,789: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:21,790: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:21,791: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016H-03Feb2017_ver3-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 17:30:21,793: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_DoubleMuon_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 17:30:21,793: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:21,793: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:21,793: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:22,501: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:22,501: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:22,509: 	 Checking credentials
+DEBUG 2018-09-23 17:30:22,510: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:22,510: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:23,318: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604533
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:24,124: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604532
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:24,124: 	 Proxy valid for 167:55:33 hours
+INFO 2018-09-23 17:30:24,125: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:24,125: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:24,167: 	 Overriden parameter Data.inputDataset with '/MuonEG/Run2016B-03Feb2017_ver2-v2/MINIAOD'
+DEBUG 2018-09-23 17:30:24,168: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:24,170: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:24,170: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016B-03Feb2017_ver2-v2'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016B-03Feb2017_ver2-v2'
+ERROR 2018-09-23 17:30:24,173: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016B-03Feb2017_ver2-v2'
+ERROR 2018-09-23 17:30:24,173: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:24,173: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:24,173: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:24,900: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:24,900: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:24,910: 	 Checking credentials
+DEBUG 2018-09-23 17:30:24,910: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:24,910: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:25,716: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604531
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:26,525: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604530
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:26,525: 	 Proxy valid for 167:55:31 hours
+INFO 2018-09-23 17:30:26,526: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:26,526: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:26,570: 	 Overriden parameter Data.inputDataset with '/MuonEG/Run2016C-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:26,571: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:26,573: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:26,573: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016C-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016C-03Feb2017-v1'
+ERROR 2018-09-23 17:30:26,575: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016C-03Feb2017-v1'
+ERROR 2018-09-23 17:30:26,576: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:26,576: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:26,576: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:27,288: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:27,288: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:27,300: 	 Checking credentials
+DEBUG 2018-09-23 17:30:27,300: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:27,300: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:28,106: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604528
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:28,913: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604528
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:28,913: 	 Proxy valid for 167:55:28 hours
+INFO 2018-09-23 17:30:28,918: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:28,918: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:28,963: 	 Overriden parameter Data.inputDataset with '/MuonEG/Run2016D-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:28,964: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:28,965: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:28,966: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016D-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016D-03Feb2017-v1'
+ERROR 2018-09-23 17:30:28,968: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016D-03Feb2017-v1'
+ERROR 2018-09-23 17:30:28,968: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:28,968: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:28,968: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:29,724: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:29,724: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:29,732: 	 Checking credentials
+DEBUG 2018-09-23 17:30:29,733: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:29,733: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:30,540: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604526
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:31,345: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604525
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:31,346: 	 Proxy valid for 167:55:26 hours
+INFO 2018-09-23 17:30:31,346: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:31,346: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:31,398: 	 Overriden parameter Data.inputDataset with '/MuonEG/Run2016E-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:31,399: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:31,401: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:31,401: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016E-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016E-03Feb2017-v1'
+ERROR 2018-09-23 17:30:31,403: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016E-03Feb2017-v1'
+ERROR 2018-09-23 17:30:31,403: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:31,403: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:31,404: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:32,112: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:32,112: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:32,123: 	 Checking credentials
+DEBUG 2018-09-23 17:30:32,123: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:32,123: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:32,928: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604524
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:33,734: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604523
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:33,735: 	 Proxy valid for 167:55:24 hours
+INFO 2018-09-23 17:30:33,735: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:33,735: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:33,784: 	 Overriden parameter Data.inputDataset with '/MuonEG/Run2016F-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:33,784: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:33,788: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:33,788: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016F-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016F-03Feb2017-v1'
+ERROR 2018-09-23 17:30:33,790: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016F-03Feb2017-v1'
+ERROR 2018-09-23 17:30:33,790: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:33,790: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:33,791: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:34,494: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:34,494: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:34,504: 	 Checking credentials
+DEBUG 2018-09-23 17:30:34,505: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:34,505: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:35,311: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604521
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:36,117: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604520
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:36,118: 	 Proxy valid for 167:55:21 hours
+INFO 2018-09-23 17:30:36,118: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:36,118: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:36,178: 	 Overriden parameter Data.inputDataset with '/MuonEG/Run2016G-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:36,179: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:36,191: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:36,191: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016G-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016G-03Feb2017-v1'
+ERROR 2018-09-23 17:30:36,197: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016G-03Feb2017-v1'
+ERROR 2018-09-23 17:30:36,197: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:36,198: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:36,198: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:36,878: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:36,878: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:36,886: 	 Checking credentials
+DEBUG 2018-09-23 17:30:36,887: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:36,887: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:37,693: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604519
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:38,503: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604518
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:38,503: 	 Proxy valid for 167:55:19 hours
+INFO 2018-09-23 17:30:38,503: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:38,504: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:38,562: 	 Overriden parameter Data.inputDataset with '/MuonEG/Run2016H-03Feb2017_ver2-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:38,563: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:38,572: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:38,573: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016H-03Feb2017_ver2-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016H-03Feb2017_ver2-v1'
+ERROR 2018-09-23 17:30:38,575: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016H-03Feb2017_ver2-v1'
+ERROR 2018-09-23 17:30:38,576: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:38,576: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:38,576: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:39,287: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:39,287: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:39,296: 	 Checking credentials
+DEBUG 2018-09-23 17:30:39,296: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:39,296: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:40,103: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604516
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:40,909: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604516
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:40,909: 	 Proxy valid for 167:55:16 hours
+INFO 2018-09-23 17:30:40,909: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:40,909: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:40,997: 	 Overriden parameter Data.inputDataset with '/MuonEG/Run2016H-03Feb2017_ver3-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:40,998: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:41,041: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:41,041: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016H-03Feb2017_ver3-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 17:30:41,043: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_MuonEG_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 17:30:41,044: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:41,044: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:41,044: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:41,841: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:41,841: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:41,849: 	 Checking credentials
+DEBUG 2018-09-23 17:30:41,849: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:41,849: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:42,655: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604514
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:43,461: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604513
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:43,461: 	 Proxy valid for 167:55:14 hours
+INFO 2018-09-23 17:30:43,461: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:43,461: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:43,630: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016B-03Feb2017_ver2-v2/MINIAOD'
+DEBUG 2018-09-23 17:30:43,631: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:43,739: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:43,739: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016B-03Feb2017_ver2-v2'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016B-03Feb2017_ver2-v2'
+ERROR 2018-09-23 17:30:43,743: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016B-03Feb2017_ver2-v2'
+ERROR 2018-09-23 17:30:43,743: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:43,743: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:43,743: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:44,736: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:44,737: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:44,745: 	 Checking credentials
+DEBUG 2018-09-23 17:30:44,746: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:44,746: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:45,551: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604511
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:46,359: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604510
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:46,360: 	 Proxy valid for 167:55:11 hours
+INFO 2018-09-23 17:30:46,360: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:46,360: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:46,406: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016C-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:46,407: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:46,438: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:46,438: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016C-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016C-03Feb2017-v1'
+ERROR 2018-09-23 17:30:46,441: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016C-03Feb2017-v1'
+ERROR 2018-09-23 17:30:46,441: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:46,441: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:46,441: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:47,171: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:47,171: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:47,180: 	 Checking credentials
+DEBUG 2018-09-23 17:30:47,180: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:47,180: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:47,986: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604509
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:48,794: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604508
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:48,794: 	 Proxy valid for 167:55:09 hours
+INFO 2018-09-23 17:30:48,795: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:48,795: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:48,886: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016D-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:48,886: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:48,938: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:48,938: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016D-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016D-03Feb2017-v1'
+ERROR 2018-09-23 17:30:48,940: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016D-03Feb2017-v1'
+ERROR 2018-09-23 17:30:48,940: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:48,940: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:48,941: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:49,720: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:49,720: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:49,729: 	 Checking credentials
+DEBUG 2018-09-23 17:30:49,730: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:49,730: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:50,536: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604506
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:51,341: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604505
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:51,342: 	 Proxy valid for 167:55:06 hours
+INFO 2018-09-23 17:30:51,342: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:51,342: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:51,411: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016E-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:51,412: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:51,457: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:51,457: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016E-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016E-03Feb2017-v1'
+ERROR 2018-09-23 17:30:51,459: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016E-03Feb2017-v1'
+ERROR 2018-09-23 17:30:51,459: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:51,460: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:51,460: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:52,151: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:52,151: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:52,161: 	 Checking credentials
+DEBUG 2018-09-23 17:30:52,161: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:52,162: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:52,967: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604504
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:53,773: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604503
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:53,773: 	 Proxy valid for 167:55:04 hours
+INFO 2018-09-23 17:30:53,773: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:53,773: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:53,817: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016F-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:53,818: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:53,820: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:53,820: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016F-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016F-03Feb2017-v1'
+ERROR 2018-09-23 17:30:53,822: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016F-03Feb2017-v1'
+ERROR 2018-09-23 17:30:53,822: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:53,822: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:53,822: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:54,510: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:54,510: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:54,519: 	 Checking credentials
+DEBUG 2018-09-23 17:30:54,519: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:54,519: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:55,324: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604501
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:56,234: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604500
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:56,235: 	 Proxy valid for 167:55:01 hours
+INFO 2018-09-23 17:30:56,235: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:56,235: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:56,281: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016G-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:56,282: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:56,284: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:56,285: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016G-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016G-03Feb2017-v1'
+ERROR 2018-09-23 17:30:56,287: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016G-03Feb2017-v1'
+ERROR 2018-09-23 17:30:56,287: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:56,287: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:56,287: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:56,993: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:56,993: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:57,001: 	 Checking credentials
+DEBUG 2018-09-23 17:30:57,002: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:57,002: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:30:57,808: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604499
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:58,619: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604498
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:30:58,619: 	 Proxy valid for 167:54:59 hours
+INFO 2018-09-23 17:30:58,619: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:30:58,619: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:30:58,665: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016H-03Feb2017_ver2-v1/MINIAOD'
+DEBUG 2018-09-23 17:30:58,666: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:30:58,668: 	 Unhandled Exception!
+ERROR 2018-09-23 17:30:58,668: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016H-03Feb2017_ver2-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016H-03Feb2017_ver2-v1'
+ERROR 2018-09-23 17:30:58,670: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016H-03Feb2017_ver2-v1'
+ERROR 2018-09-23 17:30:58,670: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:30:58,670: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:30:58,670: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:30:59,393: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:30:59,393: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:30:59,408: 	 Checking credentials
+DEBUG 2018-09-23 17:30:59,408: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:30:59,408: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:31:00,223: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604496
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:01,032: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604496
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:01,032: 	 Proxy valid for 167:54:56 hours
+INFO 2018-09-23 17:31:01,032: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:31:01,032: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:31:01,084: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016H-03Feb2017_ver3-v1/MINIAOD'
+DEBUG 2018-09-23 17:31:01,085: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:31:01,088: 	 Unhandled Exception!
+ERROR 2018-09-23 17:31:01,088: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016H-03Feb2017_ver3-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 17:31:01,091: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 17:31:01,091: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:31:01,091: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:31:01,091: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:31:01,824: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:31:01,824: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:31:01,832: 	 Checking credentials
+DEBUG 2018-09-23 17:31:01,833: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:31:01,833: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:31:02,638: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604494
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:03,446: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604493
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:03,446: 	 Proxy valid for 167:54:54 hours
+INFO 2018-09-23 17:31:03,446: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:31:03,446: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:31:03,585: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016B-03Feb2017_ver2-v2/MINIAOD'
+DEBUG 2018-09-23 17:31:03,586: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:31:03,639: 	 Unhandled Exception!
+ERROR 2018-09-23 17:31:03,639: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016B-03Feb2017_ver2-v2'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016B-03Feb2017_ver2-v2'
+ERROR 2018-09-23 17:31:03,642: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016B-03Feb2017_ver2-v2'
+ERROR 2018-09-23 17:31:03,642: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:31:03,643: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:31:03,643: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:31:04,374: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:31:04,374: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:31:04,383: 	 Checking credentials
+DEBUG 2018-09-23 17:31:04,384: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:31:04,384: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:31:05,189: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604491
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:05,996: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604491
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:05,997: 	 Proxy valid for 167:54:51 hours
+INFO 2018-09-23 17:31:05,997: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:31:05,997: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:31:06,045: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016C-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:31:06,045: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:31:06,049: 	 Unhandled Exception!
+ERROR 2018-09-23 17:31:06,049: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016C-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016C-03Feb2017-v1'
+ERROR 2018-09-23 17:31:06,051: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016C-03Feb2017-v1'
+ERROR 2018-09-23 17:31:06,051: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:31:06,051: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:31:06,051: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:31:06,743: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:31:06,743: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:31:06,751: 	 Checking credentials
+DEBUG 2018-09-23 17:31:06,752: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:31:06,752: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:31:07,558: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604489
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:08,365: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604488
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:08,366: 	 Proxy valid for 167:54:49 hours
+INFO 2018-09-23 17:31:08,367: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:31:08,367: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:31:08,419: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016D-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:31:08,420: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:31:08,421: 	 Unhandled Exception!
+ERROR 2018-09-23 17:31:08,421: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016D-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016D-03Feb2017-v1'
+ERROR 2018-09-23 17:31:08,424: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016D-03Feb2017-v1'
+ERROR 2018-09-23 17:31:08,424: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:31:08,424: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:31:08,424: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:31:09,116: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:31:09,116: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:31:09,125: 	 Checking credentials
+DEBUG 2018-09-23 17:31:09,126: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:31:09,126: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:31:09,931: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604487
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:10,736: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604486
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:10,737: 	 Proxy valid for 167:54:47 hours
+INFO 2018-09-23 17:31:10,737: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:31:10,737: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:31:10,797: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016E-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:31:10,798: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:31:10,801: 	 Unhandled Exception!
+ERROR 2018-09-23 17:31:10,801: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016E-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016E-03Feb2017-v1'
+ERROR 2018-09-23 17:31:10,803: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016E-03Feb2017-v1'
+ERROR 2018-09-23 17:31:10,803: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:31:10,803: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:31:10,803: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:31:11,507: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:31:11,507: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:31:11,516: 	 Checking credentials
+DEBUG 2018-09-23 17:31:11,516: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:31:11,516: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:31:12,321: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604484
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:13,127: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604483
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:13,127: 	 Proxy valid for 167:54:44 hours
+INFO 2018-09-23 17:31:13,127: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:31:13,127: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:31:13,175: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016F-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:31:13,176: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:31:13,177: 	 Unhandled Exception!
+ERROR 2018-09-23 17:31:13,178: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016F-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016F-03Feb2017-v1'
+ERROR 2018-09-23 17:31:13,180: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016F-03Feb2017-v1'
+ERROR 2018-09-23 17:31:13,180: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:31:13,180: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:31:13,180: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:31:13,902: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:31:13,902: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:31:13,911: 	 Checking credentials
+DEBUG 2018-09-23 17:31:13,911: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:31:13,911: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:31:14,720: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604482
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:15,527: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604481
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:15,527: 	 Proxy valid for 167:54:42 hours
+INFO 2018-09-23 17:31:15,527: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:31:15,527: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:31:15,581: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016G-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 17:31:15,582: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:31:15,583: 	 Unhandled Exception!
+ERROR 2018-09-23 17:31:15,583: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016G-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016G-03Feb2017-v1'
+ERROR 2018-09-23 17:31:15,587: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016G-03Feb2017-v1'
+ERROR 2018-09-23 17:31:15,587: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:31:15,587: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:31:15,587: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:31:16,313: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:31:16,313: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:31:16,321: 	 Checking credentials
+DEBUG 2018-09-23 17:31:16,322: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:31:16,322: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:31:17,133: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604479
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:17,942: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604479
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:17,942: 	 Proxy valid for 167:54:39 hours
+INFO 2018-09-23 17:31:17,943: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:31:17,943: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:31:17,988: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016H-03Feb2017_ver2-v1/MINIAOD'
+DEBUG 2018-09-23 17:31:17,989: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:31:17,991: 	 Unhandled Exception!
+ERROR 2018-09-23 17:31:17,991: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016H-03Feb2017_ver2-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016H-03Feb2017_ver2-v1'
+ERROR 2018-09-23 17:31:17,994: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016H-03Feb2017_ver2-v1'
+ERROR 2018-09-23 17:31:17,994: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:31:17,994: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:31:17,994: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 17:31:19,887: 	 Executing command: 'submit'
+DEBUG 2018-09-23 17:31:19,887: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 17:31:19,896: 	 Checking credentials
+DEBUG 2018-09-23 17:31:19,896: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 17:31:19,896: 	 Getting proxy life time left
+DEBUG 2018-09-23 17:31:20,701: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 604476
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:21,507: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 604475
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 17:31:21,508: 	 Proxy valid for 167:54:36 hours
+INFO 2018-09-23 17:31:21,508: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 17:31:21,508: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 17:31:21,555: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016H-03Feb2017_ver3-v1/MINIAOD'
+DEBUG 2018-09-23 17:31:21,556: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 17:31:21,558: 	 Unhandled Exception!
+ERROR 2018-09-23 17:31:21,558: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016H-03Feb2017_ver3-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 17:31:21,560: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 17:31:21,560: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 17:31:21,560: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 17:31:21,560: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:25,931: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:25,931: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:25,939: 	 Checking credentials
+DEBUG 2018-09-23 18:41:25,939: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:25,940: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:26,744: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600270
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:27,551: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600269
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:27,551: 	 Proxy valid for 166:44:30 hours
+INFO 2018-09-23 18:41:27,551: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:27,551: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:27,599: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016C-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 18:41:27,600: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:27,642: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:27,642: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016C-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016C-03Feb2017-v1'
+ERROR 2018-09-23 18:41:27,644: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016C-03Feb2017-v1'
+ERROR 2018-09-23 18:41:27,644: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:27,644: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:27,644: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:28,378: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:28,379: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:28,387: 	 Checking credentials
+DEBUG 2018-09-23 18:41:28,388: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:28,388: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:29,200: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600267
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:30,007: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600267
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:30,007: 	 Proxy valid for 166:44:27 hours
+INFO 2018-09-23 18:41:30,008: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:30,008: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:30,056: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016D-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 18:41:30,057: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:30,061: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:30,061: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016D-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016D-03Feb2017-v1'
+ERROR 2018-09-23 18:41:30,063: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016D-03Feb2017-v1'
+ERROR 2018-09-23 18:41:30,064: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:30,064: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:30,064: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:30,790: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:30,790: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:30,800: 	 Checking credentials
+DEBUG 2018-09-23 18:41:30,800: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:30,800: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:31,606: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600265
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:32,419: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600264
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:32,419: 	 Proxy valid for 166:44:25 hours
+INFO 2018-09-23 18:41:32,420: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:32,420: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:32,460: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016E-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 18:41:32,461: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:32,463: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:32,463: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016E-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016E-03Feb2017-v1'
+ERROR 2018-09-23 18:41:32,465: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016E-03Feb2017-v1'
+ERROR 2018-09-23 18:41:32,465: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:32,465: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:32,465: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:33,196: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:33,196: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:33,205: 	 Checking credentials
+DEBUG 2018-09-23 18:41:33,206: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:33,206: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:34,011: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600263
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:34,820: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600262
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:34,821: 	 Proxy valid for 166:44:23 hours
+INFO 2018-09-23 18:41:34,821: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:34,821: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:34,869: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016F-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 18:41:34,870: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:34,872: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:34,872: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016F-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016F-03Feb2017-v1'
+ERROR 2018-09-23 18:41:34,874: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016F-03Feb2017-v1'
+ERROR 2018-09-23 18:41:34,874: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:34,874: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:34,874: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:35,585: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:35,585: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:35,595: 	 Checking credentials
+DEBUG 2018-09-23 18:41:35,596: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:35,596: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:36,401: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600260
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:37,207: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600259
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:37,208: 	 Proxy valid for 166:44:20 hours
+INFO 2018-09-23 18:41:37,208: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:37,208: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:37,255: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016G-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 18:41:37,256: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:37,258: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:37,258: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016G-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016G-03Feb2017-v1'
+ERROR 2018-09-23 18:41:37,260: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016G-03Feb2017-v1'
+ERROR 2018-09-23 18:41:37,261: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:37,261: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:37,261: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:37,972: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:37,973: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:37,981: 	 Checking credentials
+DEBUG 2018-09-23 18:41:37,982: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:37,982: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:38,786: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600258
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:39,594: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600257
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:39,594: 	 Proxy valid for 166:44:18 hours
+INFO 2018-09-23 18:41:39,594: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:39,594: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:39,642: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016H-03Feb2017_ver2-v1/MINIAOD'
+DEBUG 2018-09-23 18:41:39,643: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:39,646: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:39,646: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016H-03Feb2017_ver2-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016H-03Feb2017_ver2-v1'
+ERROR 2018-09-23 18:41:39,648: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016H-03Feb2017_ver2-v1'
+ERROR 2018-09-23 18:41:39,648: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:39,648: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:39,649: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:40,411: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:40,411: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:40,420: 	 Checking credentials
+DEBUG 2018-09-23 18:41:40,420: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:40,420: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:41,227: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600255
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:42,035: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600255
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:42,036: 	 Proxy valid for 166:44:15 hours
+INFO 2018-09-23 18:41:42,036: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:42,036: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:42,088: 	 Overriden parameter Data.inputDataset with '/SingleElectron/Run2016H-03Feb2017_ver3-v1/MINIAOD'
+DEBUG 2018-09-23 18:41:42,089: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:42,091: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:42,091: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016H-03Feb2017_ver3-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 18:41:42,093: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleElectron_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 18:41:42,093: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:42,093: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:42,093: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:42,807: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:42,807: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:42,816: 	 Checking credentials
+DEBUG 2018-09-23 18:41:42,816: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:42,816: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:43,621: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600253
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:44,429: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600252
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:44,429: 	 Proxy valid for 166:44:13 hours
+INFO 2018-09-23 18:41:44,429: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:44,429: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:44,478: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016B-03Feb2017_ver2-v2/MINIAOD'
+DEBUG 2018-09-23 18:41:44,479: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:44,480: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:44,480: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016B-03Feb2017_ver2-v2'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016B-03Feb2017_ver2-v2'
+ERROR 2018-09-23 18:41:44,483: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016B-03Feb2017_ver2-v2'
+ERROR 2018-09-23 18:41:44,483: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:44,483: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:44,483: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:45,203: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:45,203: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:45,212: 	 Checking credentials
+DEBUG 2018-09-23 18:41:45,212: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:45,212: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:46,018: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600251
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:46,826: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600250
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:46,827: 	 Proxy valid for 166:44:11 hours
+INFO 2018-09-23 18:41:46,827: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:46,827: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:46,890: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016C-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 18:41:46,891: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:46,893: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:46,893: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016C-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016C-03Feb2017-v1'
+ERROR 2018-09-23 18:41:46,895: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016C-03Feb2017-v1'
+ERROR 2018-09-23 18:41:46,895: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:46,896: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:46,896: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:47,625: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:47,626: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:47,635: 	 Checking credentials
+DEBUG 2018-09-23 18:41:47,635: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:47,635: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:48,441: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600248
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:49,249: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600247
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:49,250: 	 Proxy valid for 166:44:08 hours
+INFO 2018-09-23 18:41:49,250: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:49,250: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:49,301: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016D-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 18:41:49,302: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:49,304: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:49,304: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016D-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016D-03Feb2017-v1'
+ERROR 2018-09-23 18:41:49,306: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016D-03Feb2017-v1'
+ERROR 2018-09-23 18:41:49,306: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:49,306: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:49,306: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:50,026: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:50,026: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:50,036: 	 Checking credentials
+DEBUG 2018-09-23 18:41:50,036: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:50,036: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:50,845: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600246
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:51,656: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600245
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:51,657: 	 Proxy valid for 166:44:06 hours
+INFO 2018-09-23 18:41:51,657: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:51,657: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:51,698: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016E-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 18:41:51,698: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:51,700: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:51,700: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016E-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016E-03Feb2017-v1'
+ERROR 2018-09-23 18:41:51,702: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016E-03Feb2017-v1'
+ERROR 2018-09-23 18:41:51,702: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:51,703: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:51,703: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:52,419: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:52,419: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:52,428: 	 Checking credentials
+DEBUG 2018-09-23 18:41:52,428: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:52,428: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:53,236: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600243
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:54,044: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600243
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:54,044: 	 Proxy valid for 166:44:03 hours
+INFO 2018-09-23 18:41:54,044: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:54,045: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:54,089: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016F-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 18:41:54,090: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:54,092: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:54,092: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016F-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016F-03Feb2017-v1'
+ERROR 2018-09-23 18:41:54,094: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016F-03Feb2017-v1'
+ERROR 2018-09-23 18:41:54,094: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:54,094: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:54,094: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:54,843: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:54,843: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:54,852: 	 Checking credentials
+DEBUG 2018-09-23 18:41:54,852: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:54,852: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:55,662: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600241
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:56,468: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600240
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:56,470: 	 Proxy valid for 166:44:01 hours
+INFO 2018-09-23 18:41:56,470: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:56,470: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:56,523: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016G-03Feb2017-v1/MINIAOD'
+DEBUG 2018-09-23 18:41:56,523: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:56,525: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:56,525: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016G-03Feb2017-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016G-03Feb2017-v1'
+ERROR 2018-09-23 18:41:56,528: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016G-03Feb2017-v1'
+ERROR 2018-09-23 18:41:56,528: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:56,529: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:56,529: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:57,269: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:57,269: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:57,278: 	 Checking credentials
+DEBUG 2018-09-23 18:41:57,279: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:57,279: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:41:58,084: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600238
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:58,892: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600238
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:41:58,892: 	 Proxy valid for 166:43:58 hours
+INFO 2018-09-23 18:41:58,892: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:41:58,892: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:41:58,940: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016H-03Feb2017_ver2-v1/MINIAOD'
+DEBUG 2018-09-23 18:41:58,940: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:41:58,942: 	 Unhandled Exception!
+ERROR 2018-09-23 18:41:58,942: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016H-03Feb2017_ver2-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016H-03Feb2017_ver2-v1'
+ERROR 2018-09-23 18:41:58,945: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016H-03Feb2017_ver2-v1'
+ERROR 2018-09-23 18:41:58,945: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:41:58,945: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:41:58,945: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
+DEBUG 2018-09-23 18:41:59,650: 	 Executing command: 'submit'
+DEBUG 2018-09-23 18:41:59,650: 	 Found CRAB cache file /afs/cern.ch/user/c/cfreer/.crab3
+DEBUG 2018-09-23 18:41:59,660: 	 Checking credentials
+DEBUG 2018-09-23 18:41:59,660: 	 Found proxy file /tmp/x509up_u85831
+DEBUG 2018-09-23 18:41:59,660: 	 Getting proxy life time left
+DEBUG 2018-09-23 18:42:00,466: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -timeleft
+ output : 600236
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:42:01,271: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u85831 -actimeleft
+ output : 600235
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-23 18:42:01,272: 	 Proxy valid for 166:43:56 hours
+INFO 2018-09-23 18:42:01,272: 	 Will use CRAB configuration file crab.py
+DEBUG 2018-09-23 18:42:01,272: 	 Loading CRAB configuration file.
+DEBUG 2018-09-23 18:42:01,316: 	 Overriden parameter Data.inputDataset with '/SingleMuon/Run2016H-03Feb2017_ver3-v1/MINIAOD'
+DEBUG 2018-09-23 18:42:01,317: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2018-09-23 18:42:01,319: 	 Unhandled Exception!
+ERROR 2018-09-23 18:42:01,319: 	 [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016H-03Feb2017_ver3-v1'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 307, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 407, in createWorkArea
+    os.mkdir(fullpath)
+OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 18:42:01,322: 	 ERROR: OSError: [Errno 122] Disk quota exceeded: '/afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab_monoZ_01Jan2017_SingleMuon_Run2016H-03Feb2017_ver3-v1'
+ERROR 2018-09-23 18:42:01,322: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2018-09-23 18:42:01,322: 	 	Client Version: 3.3.1809
+ERROR 2018-09-23 18:42:01,322: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/c/cfreer/MonoZ_changes/Changes/CMSSW_8_0_27/src/Analysis/monoZ/crab/crab.log to the CRAB cache.
